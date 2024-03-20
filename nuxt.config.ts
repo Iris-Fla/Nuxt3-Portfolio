@@ -5,7 +5,8 @@ export default defineNuxtConfig({
       'usebootstrap',
       'usebootstrap-docs',
       'nuxt-icon',
-      "@nuxt/image"
+      "@nuxt/image",
+      "@nuxt/fonts"
   ],
   css:['~/assets/css/default.css',"bootstrap/scss/bootstrap.scss"],
   app: {

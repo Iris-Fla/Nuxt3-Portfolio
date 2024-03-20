@@ -1,4 +1,9 @@
 <script setup lang="ts"></script>
 <template>
-    <h1>Candy</h1>
+    <h1>SweatCandy</h1>
 </template>
+<style>
+h1 {
+  font-family: "Kiwi Maru", sans-serif;
+}
+</style>

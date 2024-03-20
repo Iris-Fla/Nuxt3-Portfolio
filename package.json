@@ -10,17 +10,18 @@
     "postinstall": "nuxt prepare"
   },
   "devDependencies": {
-    "@nuxt/devtools": "^1.0.6",
-    "npm-check-updates": "^16.14.12",
-    "nuxt": "^3.10.1",
-    "vue": "^3.4.19"
+    "@nuxt/devtools": "^1.0.8",
+    "@nuxt/fonts": "^0.3.0",
+    "npm-check-updates": "^16.14.17",
+    "nuxt": "^3.11.1",
+    "vue": "^3.4.21"
   },
   "dependencies": {
-    "@vueuse/nuxt": "^10.7.2",
-    "gsap": "^3.12.4",
-    "ipx": "^3.0.0",
-    "nuxt-icon": "^0.6.7",
-    "usebootstrap": "^0.2.1",
-    "usebootstrap-docs": "^0.0.11"
+    "@vueuse/nuxt": "^10.9.0",
+    "gsap": "^3.12.5",
+    "ipx": "^3.0.1",
+    "nuxt-icon": "^0.6.9",
+    "usebootstrap": "^3.5.5",
+    "usebootstrap-docs": "^0.0.41"
   }
 }
