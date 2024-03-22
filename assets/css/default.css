@@ -1,72 +1,15 @@
+/* 
+#fff1f1
+#ecd7d7
+#ebc6c6
+#d7b0b0
+#a27777 
+*/
 .defaultBackground {
-  background-color: #292929;
+  background-color: #fff1f1;
   height: 220vh;
-  background-image: linear-gradient(to right, #555555 1px, transparent 1px),
-    linear-gradient(to bottom, #555555 1px, transparent 1px);
-  background-size: 100px 100px;
 }
 
-.center-image {
-    width: 80%; /* Adjust this value to change the image size */
-    height: auto;
-    display: block;
-    margin: 0px auto;
-    padding: 30px;
-  }
-
-.text-image {
-    width: 80%; /* Adjust this value to change the image size */
-    height: auto;
-    display: block;
-}
-
-.text-image2 {
-    width: 70%; /* Adjust this value to change the image size */
-    height: auto;
-    display: block;
-}
-.radius-button {
-  border-radius: 30px;
-}
-
-.basicButton {
-  background-color: #2594d5;
-}
-.basicButon:hover {
-  background-color: #223b49;
-}
-
-.basicShadow {
-  box-shadow: 0px 0px 3px 2px #2594d5;
-}
-
-.questionBackground {
-  background-color: #292929;
-  height: 100vh;
-  background-image: linear-gradient(to right, #555 1px, transparent 1px),
-  linear-gradient(to bottom, #555 1px, transparent 1px);
-  background-size: 100px 100px;
-}
-
-.inputGroup {
-  border: solid 20px #2594d5;
-  outline: rgb(156, 156, 156) 1px solid;
-  border-radius: 10px;
-  background-color: #2594d5;
-}
-
-.fade-move,
-.fade-enter-active,
-.fade-leave-active {
-  transition: all 0.5s ease;
-}
-
-.fade-enter-from,
-.fade-leave-to {
-  opacity: 0;
-  transform: translate(-50px, 0px);
-}
-
-.fade-leave-active {
-  position: absolute;
+.dotGothic {
+    font-family: "DotGothic16", sans-serif;
 }

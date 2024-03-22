@@ -25,7 +25,8 @@ const transition: TransitionProps = {
 </script>
 <template>
   <NuxtLayout>
-    <NuxtPage :transition="transition" />
+    <Header />
+    <NuxtPage/>
     <div class="overlay js-mask">
       <div class="text">読み込み中なのだ！</div>
     </div>
