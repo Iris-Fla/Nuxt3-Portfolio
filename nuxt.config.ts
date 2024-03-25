@@ -8,6 +8,10 @@ export default defineNuxtConfig({
       "@nuxt/image",
       "@nuxt/fonts",
       "nuxt-microcms-module",
+      {
+        serviceDomain: process.env.MICROCMS_SERVICE_DOMAIN,
+        apiKey: process.env.MICROCMS_API_KEY,
+      },
   ],
   css:['~/assets/css/default.css',"bootstrap/scss/bootstrap.scss"],
   app: {
@@ -34,10 +38,6 @@ export default defineNuxtConfig({
             },
           ],
       },
-  },
-  microCMS: {
-    serviceDomain: process.env.MICROCMS_SERVICE_DOMAIN,
-    apiKey: process.env.MICROCMS_API_KEY,
   },
   vite: {
       server: {

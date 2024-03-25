@@ -1,11 +1,11 @@
-import type { MicroCMSImage, MicroCMSListContent } from "microcms-js-sdk";
-import type { Category } from "./category";
-import type { Tag } from "./tag";
+import type { MicroCMSListContent } from "microcms-js-sdk";
 
-export type Blog = {
-  title?: string;
-  content?: string;
-  eyecatch?: MicroCMSImage;
-  category: (MicroCMSListContent & Category) | null;
-  tags: Array<MicroCMSListContent & Tag> | null;
-};
+export type Tag = {
+    name: string;
+} & MicroCMSListContent;
+
+export type Post = {
+    title: string;
+    tag: Tag[];
+    text: string;
+} & MicroCMSListContent;
