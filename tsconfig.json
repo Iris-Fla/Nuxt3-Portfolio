@@ -1,6 +1,3 @@
 {
-    "include": [
-    "./src/**/*.ts",
-    "./src/**/*.vue" // ←これを追加
-  ]
+    "extends": "./.nuxt/tsconfig.json"
 }

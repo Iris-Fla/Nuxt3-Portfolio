@@ -21,9 +21,7 @@
     "gsap": "^3.12.5",
     "ipx": "^3.0.1",
     "nuxt-icon": "^0.6.9",
-    "nuxt-microcms-module": "^3.0.2",
     "usebootstrap": "^3.5.5",
-    "usebootstrap-docs": "^0.0.41",
-    "vue3-typed-ts": "^1.0.3"
+    "usebootstrap-docs": "^0.0.41"
   }
 }
