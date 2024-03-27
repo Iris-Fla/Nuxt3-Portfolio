@@ -1,1 +1,1 @@
-export default () => 'Hello Server API'
+export default () => 'Sample'
