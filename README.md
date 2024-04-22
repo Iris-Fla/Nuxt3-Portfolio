@@ -3,7 +3,7 @@
 
 ## .envに書くこと!
 BASE_URL="https://(yourdomain).microcms.io/api/v1"
-API_KEY=""
+API_KEY="APIKey♡"
 
 ## Deploy
 まだですの...

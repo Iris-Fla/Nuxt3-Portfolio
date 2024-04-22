@@ -1,4 +1,8 @@
-<script setup>
+<script setup lang="ts">
+import * as cheerio from 'cheerio';
+import hljs from 'highlight.js'
+import 'highlight.js/styles/agate.min.css'
+
 const $config = useRuntimeConfig();
 const route = useRoute();
 const slug = route.params.slug;
@@ -9,22 +13,33 @@ const { data: article } = await useFetch(`/blog/${slug}`, {
     "X-MICROCMS-API-KEY": $config.public.apiKey,
   },
 });
+
+const $ = cheerio.load(article.value.content);
+$('pre code', 'div[data-filename]').each((_, elm) => {
+  const result = hljs.highlightAuto($(elm).text());
+  $(elm).html(result.value);
+  $(elm).addClass('hljs');
+});
+const body = $.html()
 </script>
 
 
 <template>
-  <main class="main">
-    <h1 class="title">{{ article.title }}</h1>
-    <p class="publishedAt">
-      <time :datetime="article.publishedAt" v-text="article.publishedAt" />
-    </p>
-    <div class="post" v-html="article.content" />
-  </main>
+  <Container>
+    <main class="main">
+      <h1 class="title">{{ article.title }}</h1>
+      <p class="publishedAt">
+        <time :datetime="article.publishedAt" v-text="article.publishedAt" />
+      </p>
+      <img class="thumbnail" :src="article.thumbnail.url" />
+      <div class="article" v-html="body" />
+    </main>
+  </Container>
 </template>
 
-<style lang="scss" scoped>
+<style scoped>
 .main {
-  width: 960px;
+  width: 860px;
   margin: 0 auto;
 }
 
@@ -36,18 +51,12 @@ const { data: article } = await useFetch(`/blog/${slug}`, {
   margin-bottom: 40px;
 }
 
-:deep(.post) {
-  > h2 {
-    font-size: 24px;
-    font-weight: bold;
-    margin: 40px 0 16px;
-    border-bottom: 1px solid #ddd;
-  }
+.article img {
+  width: 50%;
+}
 
 
-  > p {
-    line-height: 1.8;
-    letter-spacing: 0.2px;
-  }
+.thumbnail {
+  width: 80%;
 }
 </style>
