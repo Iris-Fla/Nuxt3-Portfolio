@@ -24,7 +24,7 @@ const { data } = await useFetch("/blog", {
                   >
                   <br />
                 </Col>
-                <Col><img :src="article.thumbnail.url" :width="300" :height="auto"/></Col>
+                <Col><img :src="article.thumbnail.url" :width="320" :height="180"/></Col>
               </Row>
             </Alert>
           </Col>

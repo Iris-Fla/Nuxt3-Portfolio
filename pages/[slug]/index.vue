@@ -1,7 +1,7 @@
-<script setup lang="ts">
-import * as cheerio from 'cheerio';
-import hljs from 'highlight.js'
-import 'highlight.js/styles/agate.min.css'
+<script setup>
+import * as cheerio from "cheerio";
+import hljs from "highlight.js";
+import "highlight.js/styles/agate.min.css";
 
 const $config = useRuntimeConfig();
 const route = useRoute();
@@ -15,14 +15,17 @@ const { data: article } = await useFetch(`/blog/${slug}`, {
 });
 
 const $ = cheerio.load(article.value.content);
-$('pre code', 'div[data-filename]').each((_, elm) => {
+$("pre code").each((_, elm) => {
   const result = hljs.highlightAuto($(elm).text());
   $(elm).html(result.value);
-  $(elm).addClass('hljs');
+  $(elm).addClass("hljs");
 });
-const body = $.html()
+$('img').each((_, element) => {
+    $(element).html();
+    $(element).addClass(`custom-image`);
+  });
+const body = $.html();
 </script>
-
 
 <template>
   <Container>
@@ -32,7 +35,8 @@ const body = $.html()
         <time :datetime="article.publishedAt" v-text="article.publishedAt" />
       </p>
       <img class="thumbnail" :src="article.thumbnail.url" />
-      <div class="article" v-html="body" />
+      <div class="article" v-html="body" style="width: 80%">
+      </div>
     </main>
   </Container>
 </template>
@@ -40,7 +44,6 @@ const body = $.html()
 <style scoped>
 .main {
   width: 860px;
-  margin: 0 auto;
 }
 
 .title {
@@ -51,12 +54,14 @@ const body = $.html()
   margin-bottom: 40px;
 }
 
-.article img {
-  width: 50%;
-}
-
-
 .thumbnail {
   width: 80%;
+}
+
+</style>
+<style>
+.custom-image {
+  width: 100%;
+  height: auto;
 }
 </style>
