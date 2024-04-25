@@ -19,6 +19,7 @@
   "dependencies": {
     "@vueuse/nuxt": "^10.9.0",
     "cheerio": "^1.0.0-rc.12",
+    "dayjs": "^1.11.10",
     "gsap": "^3.12.5",
     "highlight.js": "^11.9.0",
     "ipx": "^3.0.1",

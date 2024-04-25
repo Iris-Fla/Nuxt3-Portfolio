@@ -32,19 +32,16 @@ const body = $.html();
     <main class="main">
       <h1 class="title">{{ article.title }}</h1>
       <p class="publishedAt">
-        <time :datetime="article.publishedAt" v-text="article.publishedAt" />
+        投稿日:{{ $formatDate(String(article.publishedAt)) }}
       </p>
-      <img class="thumbnail" :src="article.thumbnail.url" />
-      <div class="article" v-html="body" style="width: 80%">
+      <img class="custom-image" :src="article.thumbnail.url" />
+      <div class="article" v-html="body">
       </div>
     </main>
   </Container>
 </template>
 
 <style scoped>
-.main {
-  width: 860px;
-}
 
 .title {
   margin-bottom: 20px;
@@ -54,14 +51,13 @@ const body = $.html();
   margin-bottom: 40px;
 }
 
-.thumbnail {
-  width: 80%;
-}
-
 </style>
 <style>
 .custom-image {
-  width: 100%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 70%;
   height: auto;
 }
 </style>
