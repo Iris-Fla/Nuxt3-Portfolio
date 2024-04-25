@@ -14,7 +14,7 @@
     "@nuxt/fonts": "^0.6.1",
     "npm-check-updates": "^16.14.18",
     "nuxt": "^3.11.2",
-    "vue": "^3.4.23"
+    "vue": "^3.4.25"
   },
   "dependencies": {
     "@vueuse/nuxt": "^10.9.0",
