@@ -5,11 +5,20 @@
 #d7b0b0
 #a27777 
 */
+.color-sample {
+  color: #fff1f1
+  #ecd7d7
+  #ebc6c6
+  #d7b0b0
+  #a27777 ;
+}
 .defaultBackground {
-  background-color: #ffffff;
-  height: 220vh;
+  background-color: #fff1f1;
 }
 
 .kiwi {
     font-family: "Kiwi Maru", sans-serif;
+}
+.NotoSans {
+    font-family: "Noto Sans JP", sans-serif;
 }

@@ -29,7 +29,7 @@ const body = $.html();
 
 <template>
   <Container>
-    <main class="kiwi">
+    <main class="NotoSans">
       <h1 class="title">{{ article.title }}</h1>
       <p class="publishedAt">
         投稿日:{{ $formatDate(String(article.publishedAt)) }}
