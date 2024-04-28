@@ -12,14 +12,14 @@
   "devDependencies": {
     "@nuxt/devtools": "^1.2.0",
     "@nuxt/fonts": "^0.6.1",
-    "npm-check-updates": "^16.14.18",
+    "npm-check-updates": "^16.14.20",
     "nuxt": "^3.11.2",
     "vue": "^3.4.25"
   },
   "dependencies": {
     "@vueuse/nuxt": "^10.9.0",
     "cheerio": "^1.0.0-rc.12",
-    "dayjs": "^1.11.10",
+    "dayjs": "^1.11.11",
     "gsap": "^3.12.5",
     "highlight.js": "^11.9.0",
     "ipx": "^3.0.1",
