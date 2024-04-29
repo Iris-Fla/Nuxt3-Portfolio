@@ -6,7 +6,7 @@
       <NavbarCollapse>
         <NavbarNavList>
           <NavItem class="NavItem">
-            <NavLink to="/about"> About </NavLink>
+            <NavLink to="/about">About</NavLink>
           </NavItem>
           <NavItem class="NavItem">
             <NavLink>Blog</NavLink>

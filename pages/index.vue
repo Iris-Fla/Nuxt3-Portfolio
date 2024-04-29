@@ -1,25 +1,32 @@
 <script setup>
 const $config = useRuntimeConfig();
 
-const { data } = await useFetch("/blog", {
+const { data:blog } = await useFetch("/blog", {
   baseURL: $config.public.baseURL,
   headers: {
     "X-MICROCMS-API-KEY": $config.public.apiKey,
   },
 });
+const { data:tags } = await useFetch("/tags", {
+  baseURL: $config.public.baseURL,
+  headers: {
+    "X-MICROCMS-API-KEY": $config.public.apiKey,
+  },
+});
+console.log(tags.contents);
 </script>
 <template>
   <Container>
     <Row>
-      <Col col="12 sm-4" v-for="article in data.contents" :key="article.id">
+      <Col col="12 md-4" v-for="article in blog.contents" :key="article.id">
       <NuxtLink :to="`/${article.id}`" style="text-decoration: none; color: inherit;">
         <Card margin="b-3" :to="`/${article.id}`" class="card-style">
           <CardImgTop :src="article.thumbnail.url" alt="Article image" />
           <CardBody>
-            <CardTitle margin="b-3">{{ article.title }}</CardTitle>
+            <CardTitle margin="b-3"><strong>{{ article.title }}</strong></CardTitle>
             <div class="tag-style">
               <p v-for="tag in article.tags" :key="tag.id">
-                {{ tag.id }}
+                    {{ tag.name }}
               </p>
             </div>
             <CardText small style="opacity: 0.8;">
@@ -47,9 +54,12 @@ const { data } = await useFetch("/blog", {
   display: flex;
   gap: 10px;
 }
+
 .tag-style p {
   background-color: #c3def0;
   border: 1px solid #c3def0;
   padding: 3px 8px;
-  border-radius: 8px;}
+  border-radius: 8px;
+}
+
 </style>

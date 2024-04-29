@@ -1,5 +1,5 @@
 <template>
-      <div class="defaultBackground NotoSans">
+      <div class="defaultBackground kiwi">
         <Header/>
         <slot />
       </div>
