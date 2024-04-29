@@ -34,8 +34,8 @@ const { data } = await useFetch("/blog", {
 </template>
 <style scoped>
 .card-style {
-  color: #755d5d;
-  background-color: #fbf5f5;
+  color: #33272a;
+  background-color: #fffffe;
   transition: all 0.3s ease-in-out;
 }
 
@@ -48,7 +48,8 @@ const { data } = await useFetch("/blog", {
   gap: 10px;
 }
 .tag-style p {
-  border: 1px solid #755d5d;
-  padding: 3px 8px; 
+  background-color: #c3def0;
+  border: 1px solid #c3def0;
+  padding: 3px 8px;
   border-radius: 8px;}
 </style>

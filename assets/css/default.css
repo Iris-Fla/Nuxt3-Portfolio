@@ -1,19 +1,17 @@
-/* 
-#fff1f1
-#ecd7d7
-#ebc6c6
-#d7b0b0
-#a27777 
-*/
-.color-sample {
-  color: #fff1f1
-  #ecd7d7
-  #ebc6c6
-  #d7b0b0
-  #a27777 ;
-}
 .defaultBackground {
-  background-color: #fff1f1;
+  background-color: #faeee7;
+}
+.main-color {
+  color: #33272a;
+}
+.sub-color {
+  color: #594a4e;
+}
+.accent-color {
+  color: #ff8ba7;
+}
+.accent-color2 {
+  color: #c3def0;
 }
 
 .kiwi {

@@ -1,7 +1,7 @@
 <template>
   <Navbar class="kawaiiNav" expand="lg" margin="b-4">
     <Container type="fluid" class="kiwi">
-      <NavbarBrand to="/" style="color:#a27777;">すいれんの図書館<BIcon margin="s-1" icon="bi:book"/></NavbarBrand>
+      <NavbarBrand to="/" style="color:#33272a;">すいれんの図書館<BIcon margin="s-1" icon="bi:book"/></NavbarBrand>
       <NavbarToggler />
       <NavbarCollapse>
         <NavbarNavList>
@@ -18,14 +18,7 @@
 </template>
 <style>
 .kawaiiNav {
-  background-color: #ffffff00;
-  box-shadow: 0 0 10px #a27777;
-}
-.NavItem {
-  box-shadow: 0 0 10px #a27777;
-  border-radius: 20px;
-  margin: 10px;
-  padding: 5px;
-  text-align: center;
+  background-color: #ffc6c7;
+  box-shadow: 0 0 20px #a27777;
 }
 </style>
