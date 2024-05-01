@@ -30,7 +30,7 @@ const body = $.html();
 <template>
   <Container>
     <main class="kiwi main-color">
-      <h1 class="title">{{ article.title }}</h1>
+      <h1 class="title">{{ article.title }}<span class="Cocoa"></span></h1>
       <p class="publishedAt">
         投稿日:{{ $formatDate(String(article.publishedAt)) }}
       </p>
@@ -45,6 +45,19 @@ const body = $.html();
 
 .title {
   margin-bottom: 20px;
+  position: relative;
+}
+
+.title::after {
+  content: "";
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  background: #ffffff;
+  border-radius: 50%;
+  right: -60px;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 .publishedAt {

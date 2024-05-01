@@ -7,13 +7,6 @@ const { data:blog } = await useFetch("/blog", {
     "X-MICROCMS-API-KEY": $config.public.apiKey,
   },
 });
-const { data:tags } = await useFetch("/tags", {
-  baseURL: $config.public.baseURL,
-  headers: {
-    "X-MICROCMS-API-KEY": $config.public.apiKey,
-  },
-});
-console.log(tags.contents);
 </script>
 <template>
   <Container>
