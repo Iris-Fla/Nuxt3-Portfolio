@@ -11,10 +11,10 @@
   },
   "devDependencies": {
     "@nuxt/devtools": "^1.2.0",
-    "@nuxt/fonts": "^0.6.1",
+    "@nuxt/fonts": "^0.7.0",
     "npm-check-updates": "^16.14.20",
     "nuxt": "^3.11.2",
-    "vue": "^3.4.25"
+    "vue": "^3.4.26"
   },
   "dependencies": {
     "@vueuse/nuxt": "^10.9.0",
