@@ -14,7 +14,7 @@ const { data:blog } = await useFetch("/blog", {
       <Col col="12 md-4" v-for="article in blog.contents" :key="article.id">
       <NuxtLink :to="`/${article.id}`" style="text-decoration: none; color: inherit;">
         <Card margin="b-3" :to="`/${article.id}`" class="card-style">
-          <CardImgTop :src="article.thumbnail.url" alt="Article image" />
+          <CardImgTop :src="article.thumbnail.url" alt="Article image" class="thumbnail-image" />
           <CardBody>
             <CardTitle margin="b-3"><strong>{{ article.title }}</strong></CardTitle>
             <div class="tag-style">
@@ -55,4 +55,7 @@ const { data:blog } = await useFetch("/blog", {
   border-radius: 8px;
 }
 
+.thumbnail-image {
+  view-transition-name: thumbnail-image;
+}
 </style>

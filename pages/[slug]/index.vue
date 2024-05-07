@@ -34,7 +34,7 @@ const body = $.html();
       <p class="publishedAt">
         投稿日:{{ $formatDate(String(article.publishedAt)) }}
       </p>
-      <img class="custom-image" :src="article.thumbnail.url" />
+      <img class="thumbnail-image" :src="article.thumbnail.url" />
       <div class="article" v-html="body">
       </div>
     </main>
@@ -64,13 +64,22 @@ const body = $.html();
   margin-bottom: 40px;
 }
 
+.thumbnail-image {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  height: auto;
+  view-transition-name: thumbnail-image;
+}
+
 </style>
 <style>
 .custom-image {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 80%;
+  width: 100%;
   height: auto;
 }
 </style>
