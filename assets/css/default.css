@@ -1,5 +1,5 @@
 .defaultBackground {
-  background-color: #faeee7;
+  background-color: #ffffff;
 }
 .main-color {
   color: #33272a;
@@ -20,4 +20,7 @@
 }
 .NotoSans {
     font-family: "Noto Sans JP", sans-serif;
+}
+.Mochiy {
+  font-family: "Mochiy Pop One", sans-serif
 }

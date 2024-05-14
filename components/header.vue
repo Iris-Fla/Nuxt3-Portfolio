@@ -1,12 +1,12 @@
 <template>
   <Navbar class="kawaiiNav" expand="lg" margin="b-4">
     <Container type="fluid" class="kiwi">
-      <NavbarBrand to="/" style="color:#33272a;">すいれんの図書館<BIcon margin="s-1" icon="bi:book"/></NavbarBrand>
+      <NavbarBrand href="/" style="color:#33272a;">すいれんの図書館<BIcon margin="s-1" icon="bi:book"/></NavbarBrand>
       <NavbarToggler />
       <NavbarCollapse>
         <NavbarNavList>
           <NavItem class="NavItem">
-            <NavLink to="/about">About</NavLink>
+            <NavLink href="/about">About</NavLink>
           </NavItem>
           <NavItem class="NavItem">
             <NavLink>Blog</NavLink>

@@ -1,1 +1,5 @@
-<template><h1>あばうとだよ～</h1></template>
+<template>
+  <div>
+    <h1>About</h1>
+  </div>
+</template>

@@ -1,6 +1,5 @@
 <script setup>
 const $config = useRuntimeConfig();
-
 const { data:blog } = await useFetch("/blog", {
   baseURL: $config.public.baseURL,
   headers: {
@@ -9,7 +8,7 @@ const { data:blog } = await useFetch("/blog", {
 });
 </script>
 <template>
-  <Container>
+  <Container padding="10px">
     <Row>
       <Col col="12 md-4" v-for="article in blog.contents" :key="article.id">
       <NuxtLink :to="`/${article.id}`" style="text-decoration: none; color: inherit;">
@@ -40,7 +39,7 @@ const { data:blog } = await useFetch("/blog", {
 }
 
 .card-style:hover {
-  transform: scale(1.05);
+  transform: scale(0.95);
 }
 
 .tag-style {
@@ -53,9 +52,5 @@ const { data:blog } = await useFetch("/blog", {
   border: 1px solid #c3def0;
   padding: 3px 8px;
   border-radius: 8px;
-}
-
-.thumbnail-image {
-  view-transition-name: thumbnail-image;
 }
 </style>

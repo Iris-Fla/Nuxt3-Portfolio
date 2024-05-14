@@ -2,6 +2,9 @@
 const { BASE_URL, API_KEY } = process.env;
 
 export default defineNuxtConfig({
+  experimental: {
+    viewTransition: true,
+  },
   modules: [
     "@vueuse/nuxt",
     "usebootstrap",
@@ -20,9 +23,6 @@ export default defineNuxtConfig({
       ],
     },
     pageTransition: { name: 'page', mode: 'out-in' }
-  },
-  experimental: {
-    viewTransition: true,
   },
   runtimeConfig: {
     public: {
