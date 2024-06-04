@@ -16,11 +16,11 @@ const { data:blog } = await useFetch("/blog", {
           <CardImgTop :src="article.thumbnail.url" alt="Article image" class="thumbnail-image" />
           <CardBody>
             <CardTitle margin="b-3"><strong>{{ article.title }}</strong></CardTitle>
-            <div class="tag-style">
+            <!-- <div class="tag-style">
               <p v-for="tag in article.tags" :key="tag.id">
                     {{ tag.name }}
               </p>
-            </div>
+            </div> -->
             <CardText small style="opacity: 0.8;">
               <BIcon margin="e-1" icon="bi:clock" />{{ $formatDate(String(article.publishedAt)) }}
             </CardText>
@@ -36,6 +36,7 @@ const { data:blog } = await useFetch("/blog", {
   color: #33272a;
   background-color: #fffffe;
   transition: all 0.3s ease-in-out;
+  box-shadow: 0 0 5px #bdbdbd;
 }
 
 .card-style:hover {

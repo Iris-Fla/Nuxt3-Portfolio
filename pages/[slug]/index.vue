@@ -19,6 +19,7 @@ const { data: article } = await useFetch(`/blog/${slug}`, {
     "X-MICROCMS-API-KEY": $config.public.apiKey,
   },
 });
+console.log(article)
 
 const $ = cheerio.load(article.value.content);
 $("pre code").each((_, elm) => {
@@ -27,19 +28,22 @@ $("pre code").each((_, elm) => {
   $(elm).addClass("hljs");
 });
 $('img').each((_, element) => {
-  $(element).html();
   $(element).addClass(`custom-image`);
 });
+$("table").each((_, element) => {
+  $(element).addClass("table border-top-color table-bordered");
+});
+
 const body = $.html();
 </script>
 
 <template>
   <Container>
     <main class="kiwi main-color">
-      <h1 class="title Mochiy">{{ article.title }}<span class="Cocoa"></span></h1>
-      <p class="publishedAt">
+      <BH1 class="title">{{ article.title }}<span class="Cocoa"></span></BH1>
+      <b-p class="publishedAt">
         投稿日:{{ $formatDate(String(article.publishedAt)) }}
-      </p>
+      </b-p>
       <img class="thumbnail-image" :src="article.thumbnail.url" />
       <div class="article" v-html="body">
       </div>
@@ -54,8 +58,9 @@ const body = $.html();
   margin-right: auto;
   width: 100%;
   height: auto;
-  box-shadow: 0 0 20px #a27777;
-  margin-bottom: 20px;
+  box-shadow: 0 0 20px #5c5c5c;
+  margin-bottom: 50px;
+  margin-top: 50px;
 }
 </style>
 <style>
@@ -65,12 +70,26 @@ const body = $.html();
   margin-right: auto;
   width: 100%;
   height: auto;
+  box-shadow: 0 0 10px #bdbdbd;
+  margin-top:20px;
+  margin-bottom: 20px;
 }
 
 h1 {
   color: #000000;
   position: relative;
   padding-bottom: 15px;
+  margin-top: 50px;
+  margin-bottom: 20px;
+}
+
+h3 {
+  margin-top: 20px;
+}
+
+a {
+  text-decoration: none;
+  color: rgb(29, 166, 190);
 }
 
 h1::after {
@@ -79,24 +98,33 @@ h1::after {
   position: absolute;
   left: 0;
   bottom: 0;
-  height: 10px;
+  height: 6px;
   width: 100%;
-  background-color: #ff8ba7;
+  background-color: #8bdaff;
   border-radius: 5px;
 }
 
 h2 {
-  color: #f0f;
+  color:rgb(0, 0, 0);
+  margin-top: 40px;
+  margin-bottom: 20px;
+  position: relative;
+}
+h2::after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  left: 0;
+  bottom: -8px;
+  height: 3px;
+  width: 100%;
+  background-color: #aaaaaa;
+  border-radius: 3px;
 }
 
 p {
   color: rgb(0, 0, 0);
-  margin: -0.5;
-}
-
-a {
-  text-decoration: none;
-  color: rgb(33, 196, 224);
+  margin: 0.5px;
 }
 
 li {

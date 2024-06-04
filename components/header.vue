@@ -1,7 +1,7 @@
 <template>
   <Navbar class="kawaiiNav" expand="lg" margin="b-4">
     <Container type="fluid" class="kiwi">
-      <NavbarBrand href="/" style="color:#33272a;">すいれんの図書館<BIcon margin="s-1" icon="bi:book"/></NavbarBrand>
+      <NavbarBrand href="/" style="color:#33272a;">メルの図書館<BIcon margin="s-1" icon="bi:book"/></NavbarBrand>
       <NavbarToggler />
       <NavbarCollapse>
         <NavbarNavList>
@@ -18,7 +18,6 @@
 </template>
 <style>
 .kawaiiNav {
-  background-color: #ffc6c7;
-  box-shadow: 0 0 20px #a27777;
+  background-color: #c6e8ff86;
 }
 </style>

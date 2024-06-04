@@ -2,6 +2,7 @@
   <div class="defaultBackground kiwi">
     <Header />
     <slot />
+    <Footer />
   </div>
 </template>
 
