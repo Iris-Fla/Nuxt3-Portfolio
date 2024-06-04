@@ -1,7 +1,7 @@
 <template>
     <Container class="text-center">
         <div class="margin">
-            <a href="#">先頭に戻る</a>
+            <a href="#">先頭に戻る </a>
         </div>
     </Container>
 </template>
