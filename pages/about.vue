@@ -54,17 +54,17 @@
         <b-tr>
           <b-td>2023年</b-td>
           <b-td>マイクロソフト<a href="https://www.microsoft.com/ja-jp/industry/blog/microsoft-in-business/2023/04/20/mixed-reality-for-professional-education/">(Link)</a></b-td>
+          <b-td>MRデバイス(Hololens2)を用いてサークル用のデモを製作し、新技術の紹介を行いました。</b-td>
+        </b-tr>
+        <b-tr>
+          <b-td>2024年</b-td>
+          <b-td>マイクロソフト<a href="https://www.microsoft.com/ja-jp/industry/blog/microsoft-in-business/2024/04/05/case-study-utilization-of-azure-openai-service-by-students/">(Link)</a></b-td>
+          <b-td>Azure OpenAI を使い学内の利便性を向上させる事を目的に学生とキャリアセンターが連携できる就活サイトの開発をチームで行いました。</b-td>
+        </b-tr>
+        <b-tr>
+          <b-td>2024年</b-td>
+          <b-td>窓の杜</b-td>
           <b-td></b-td>
-        </b-tr>
-        <b-tr>
-          <b-td>2022年</b-td>
-          <b-td>私立奈良育英高校</b-td>
-          <b-td>ARDF競技大会で関西2位,全国10位でした。</b-td>
-        </b-tr>
-        <b-tr>
-          <b-td>2026年(見込み)</b-td>
-          <b-td>京都デザイン＆テクノロジー専門学校</b-td>
-          <b-td>現在に至るまで沢山の言語を学習しています。</b-td>
         </b-tr>
       </b-tbody>
     </b-table>
