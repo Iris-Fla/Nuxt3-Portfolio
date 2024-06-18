@@ -26,7 +26,7 @@
         <b-tr>
           <b-td>2022年</b-td>
           <b-td>私立奈良育英高校</b-td>
-          <b-td>ARDF競技大会で関西2位,全国10位でした。</b-td>
+          <b-td>ARDF競技大会で関西2位,全国10位✨でした。</b-td>
         </b-tr>
         <b-tr>
           <b-td>2026年(見込み)</b-td>
@@ -63,8 +63,8 @@
         </b-tr>
         <b-tr>
           <b-td>2024年</b-td>
-          <b-td>窓の杜</b-td>
-          <b-td></b-td>
+          <b-td>窓の杜<a href="https://forest.watch.impress.co.jp/docs/special/1598339.html">(Link)</a></b-td>
+          <b-td>Intel社が開催したOpenVinoとAipcを活用したアプリケーション開発コンテストで最優秀賞を頂き、東京で行われたIntelAiSummitのプログラム内でプレゼンテーションを発表した際の記事です。</b-td>
         </b-tr>
       </b-tbody>
     </b-table>
