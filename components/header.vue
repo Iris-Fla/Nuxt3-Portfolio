@@ -8,8 +8,8 @@
           <NavItem class="NavItem">
             <NavLink href="/about">About</NavLink>
           </NavItem>
-          <NavItem class="NavItem">
-            <NavLink>Blog</NavLink>
+          <NavItem  class="NavItem">
+            <NavLink href="/">Blog</NavLink>
           </NavItem>
         </NavbarNavList>
       </NavbarCollapse>

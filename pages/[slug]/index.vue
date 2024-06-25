@@ -62,6 +62,7 @@ const body = $.html();
   margin-bottom: 50px;
   margin-top: 50px;
 }
+
 </style>
 <style>
 .custom-image {
@@ -131,4 +132,10 @@ li {
   margin-top: 1em;
   margin-bottom: 1em;
 }
+
+pre {
+  margin:5px;
+}
+
+
 </style>
