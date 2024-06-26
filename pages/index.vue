@@ -1,11 +1,5 @@
 <script setup>
-const $config = useRuntimeConfig();
-const { data:blog } = await useFetch("/blog", {
-  baseURL: $config.public.baseURL,
-  headers: {
-    "X-MICROCMS-API-KEY": $config.public.apiKey,
-  },
-});
+const { data: blog } = await useFetch('/api/blog');
 </script>
 <template>
   <Container padding="10px">

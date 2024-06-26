@@ -25,9 +25,9 @@ export default defineNuxtConfig({
     pageTransition: { name: 'page', mode: 'out-in' }
   },
   runtimeConfig: {
+    apiKey: API_KEY,
     public: {
       baseURL: BASE_URL,
-      apiKey: API_KEY,
     },
   },
   vite: {

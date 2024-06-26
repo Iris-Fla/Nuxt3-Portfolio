@@ -9,18 +9,10 @@ onMounted(() => {
   gsap.to('.thumbnail-image', { borderRadius: '30px', duration: 1 });
 });
 
-const $config = useRuntimeConfig();
 const route = useRoute();
 const slug = route.params.slug;
 
-const { data: article } = await useFetch(`/blog/${slug}`, {
-  baseURL: $config.public.baseURL,
-  headers: {
-    "X-MICROCMS-API-KEY": $config.public.apiKey,
-  },
-});
-console.log(article)
-
+const { data: article } = await useFetch(`/api/blog/${slug}`);
 const $ = cheerio.load(article.value.content);
 $("pre code").each((_, elm) => {
   const result = hljs.highlightAuto($(elm).text());
