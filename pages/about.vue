@@ -19,8 +19,8 @@ export default defineComponent({
       }, 100)
     })
     const showAlternateName = ref(false)
-    const name = ref('メル🔮')
-    const alternateName = ref('Iris-Fla')
+    const name = ref('Iris-Fla')
+    const alternateName = ref('メル🔮')
 
     const currentName = computed(() =>
       showAlternateName.value ? alternateName.value : name.value
