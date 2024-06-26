@@ -6,7 +6,7 @@
       <NavbarCollapse>
         <NavbarNavList>
           <NavItem class="NavItem">
-            <NavLink href="/about">About</NavLink>
+            <NavLink href="/about">Profile</NavLink>
           </NavItem>
           <NavItem  class="NavItem">
             <NavLink href="/">Blog</NavLink>
@@ -18,6 +18,6 @@
 </template>
 <style>
 .kawaiiNav {
-  background-color: #ffffff00;
+  background-color: #ff000000;
 }
 </style>

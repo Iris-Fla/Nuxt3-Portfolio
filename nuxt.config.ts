@@ -2,6 +2,7 @@
 const { BASE_URL, API_KEY } = process.env;
 
 export default defineNuxtConfig({
+  components: true,
   experimental: {
     viewTransition: true,
   },
