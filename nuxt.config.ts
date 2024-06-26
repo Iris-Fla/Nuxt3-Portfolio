@@ -16,7 +16,7 @@ export default defineNuxtConfig({
   css: ["~/assets/css/default.css", "bootstrap/scss/bootstrap.scss"],
   app: {
     head: {
-      title: "SuirenMeru",
+      title: "メルの図書館",
       meta: [
         { charset: "utf-8" },
         { name: "viewport", content: "width=device-width, initial-scale=1" },
