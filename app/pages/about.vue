@@ -1,4 +1,5 @@
-<script lang="ts" setup>
+<script setup>
+
 useHead({
   title: "メルのプロフィール",
   meta: [
@@ -27,7 +28,7 @@ const currentName = computed(() =>
   showAlternateName.value ? alternateName.value : name.value
 )
 
-const currentNameKey = computed((): string =>
+const currentNameKey = computed(() =>
   showAlternateName.value ? "alternate" : "primary"
 )
 

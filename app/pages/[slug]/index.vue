@@ -1,13 +1,15 @@
 <script setup>
+import 'highlight.js/styles/agate.css';
 import * as cheerio from "cheerio";
 import hljs from "highlight.js";
+
 
 import { gsap } from 'gsap';
 
 const route = useRoute();
 const slug = route.params.slug;
 
-const { data: article } = await useFetch(`/api/blog/${slug}`,{server:true});
+const { data: article } = await useFetch(`/api/blog/${slug}`);
 
 useHead({
   title: article.value.title,
@@ -21,6 +23,7 @@ useHead({
     { property: "og:image", content: article.value.thumbnail.url },
   ],
 });
+
 
 const $ = cheerio.load(article.value.content);
 $("pre code").each((_, elm) => {
@@ -50,7 +53,7 @@ onMounted(() => {
         投稿日:{{ $formatDate(String(article.publishedAt)) }}
       </b-p>
       <img class="thumbnail-image" :src="article.thumbnail.url" />
-      <div class="article" v-html="body">
+      <div v-if="body" class="article" v-html="body">
       </div>
     </main>
   </Container>
