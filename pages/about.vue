@@ -148,7 +148,7 @@ export default defineComponent({
         <b-tr>
           <b-td>2024年</b-td>
           <b-td
-            >窓の杜<a
+            >インテル<a
               href="https://forest.watch.impress.co.jp/docs/special/1598339.html"
               >(Link)</a
             ></b-td
