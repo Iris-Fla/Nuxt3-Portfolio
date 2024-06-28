@@ -1,57 +1,44 @@
-<script lang="ts">
-interface SetupReturn {
-  showAlternateName: Ref<boolean>;
-  name: Ref<string>;
-  alternateName: Ref<string>;
-  currentName: ComputedRef<string>;
-  currentNameKey: ComputedRef<string>;
-  toggleName: () => void;
+<script lang="ts" setup>
+useHead({
+  title: "メルのプロフィール",
+  meta: [
+    { property: "og:title", content: "メルのプロフィール" },
+    {
+      property: "og:description",
+      content: "技術スタックや簡単なプロフィールを掲載しています。",
+    },
+    { property: "og:type", content: "website" },
+  ]})
+
+const startAnimation = ref(false)
+
+onMounted(() => {
+  // コンポーネントがマウントされた後に少し遅延してアニメーションを開始
+  setTimeout(() => {
+    startAnimation.value = true
+  }, 100)
+})
+
+const showAlternateName = ref(false)
+const name = ref("Iris-Fla")
+const alternateName = ref("メル🔮")
+
+const currentName = computed(() =>
+  showAlternateName.value ? alternateName.value : name.value
+)
+
+const currentNameKey = computed((): string =>
+  showAlternateName.value ? "alternate" : "primary"
+)
+
+const toggleName = () => {
+  showAlternateName.value = !showAlternateName.value
 }
-
-export default defineComponent({
-  setup() {
-    const startAnimation = ref(false);
-
-    onMounted(() => {
-      // コンポーネントがマウントされた後に少し遅延してアニメーションを開始
-      setTimeout(() => {
-        startAnimation.value = true;
-      }, 100);
-    });
-    const showAlternateName = ref(false);
-    const name = ref("Iris-Fla");
-    const alternateName = ref("メル🔮");
-
-    const currentName = computed(() =>
-      showAlternateName.value ? alternateName.value : name.value
-    );
-
-    const currentNameKey = computed((): string =>
-      showAlternateName.value ? "alternate" : "primary"
-    );
-
-    const toggleName = () => {
-      showAlternateName.value = !showAlternateName.value;
-    };
-
-    return {
-      startAnimation,
-      showAlternateName,
-      name,
-      alternateName,
-      currentName,
-      currentNameKey,
-      toggleName,
-    };
-  },
-});
 </script>
 <template>
   <Container>
-    <div>
-      
-    </div>
-    
+    <div></div>
+
     <div class="profile-header">
       <div class="profile-icon">
         <img src="/profile.jpg" alt="プロフィールアイコン" />
@@ -76,7 +63,6 @@ export default defineComponent({
 
     <div class="skills-section about-me" :class="{ animate: startAnimation }">
       <h2>自己紹介</h2>
-      <WaveText text="ホバーしてウェーブ!" />
       <p>
         ゼロからアプリケーションやサービスを企画し、自分一人でも実装出来るように色々な範囲を勉強しています。新しい物と技術が好きです。
       </p>

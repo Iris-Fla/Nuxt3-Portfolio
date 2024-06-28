@@ -1,5 +1,14 @@
 <script setup>
 const { data: blog } = await useFetch('/api/blog');
+
+useHead({
+  title: '記事一覧',
+  meta: [
+    { property: 'og:title', content: '記事一覧' },
+    { property: 'og:description', content: '私(Iris-Fla)の学んだ技術や課題解決のアウトプット一覧です。' },
+    { property: 'og:type', content: 'article' }
+  ]
+})
 </script>
 <template>
   <Container padding="10px">

@@ -1,3 +1,4 @@
+
 // server/api/blog/[slug].ts
 export default defineEventHandler(async (event) => {
   const config = useRuntimeConfig()

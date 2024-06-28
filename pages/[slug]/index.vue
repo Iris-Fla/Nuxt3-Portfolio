@@ -1,18 +1,27 @@
 <script setup>
 import * as cheerio from "cheerio";
 import hljs from "highlight.js";
-import "highlight.js/styles/agate.min.css";
-import { onMounted } from 'vue';
-import { gsap } from 'gsap';
 
-onMounted(() => {
-  gsap.to('.thumbnail-image', { borderRadius: '30px', duration: 1 });
-});
+import { gsap } from 'gsap';
 
 const route = useRoute();
 const slug = route.params.slug;
 
-const { data: article } = await useFetch(`/api/blog/${slug}`);
+const { data: article } = await useFetch(`/api/blog/${slug}`,{server:true});
+
+useHead({
+  title: article.value.title,
+  meta: [
+    { property: "og:title", content: article.value.title },
+    {
+      property: "og:description",
+      content: article.value.description,
+    },
+    { property: "og:type", content: "article" },
+    { property: "og:image", content: article.value.thumbnail.url },
+  ],
+});
+
 const $ = cheerio.load(article.value.content);
 $("pre code").each((_, elm) => {
   const result = hljs.highlightAuto($(elm).text());
@@ -27,6 +36,10 @@ $("table").each((_, element) => {
 });
 
 const body = $.html();
+
+onMounted(() => {
+  gsap.to('.thumbnail-image', { borderRadius: '30px', duration: 1 });
+});
 </script>
 
 <template>
