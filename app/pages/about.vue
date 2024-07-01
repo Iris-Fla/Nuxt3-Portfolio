@@ -68,6 +68,25 @@ const toggleName = () => {
         ゼロからアプリケーションやサービスを企画し、自分一人でも実装出来るように色々な範囲を勉強しています。新しい物と技術が好きです。
       </p>
     </div>
+    <h2>SNS一覧</h2>
+    <b-table>
+      <b-thead>
+        <b-tr>
+          <b-th scope="col"> SNS </b-th>
+          <b-th scope="col"> URL </b-th>
+        </b-tr>
+      </b-thead>
+      <b-tbody>
+        <b-tr>
+          <b-td>Github</b-td>
+          <b-td><NuxtLink href="https://github.com/Iris-Fla">Link</NuxtLink></b-td>
+        </b-tr>
+        <b-tr>
+          <b-td>X</b-td>
+          <b-td><NuxtLink href="https://x.com/Iris_Flandre">Link</NuxtLink></b-td>
+        </b-tr>
+      </b-tbody>
+    </b-table>
     <h2>学歴</h2>
     <b-table>
       <b-thead>
@@ -97,7 +116,7 @@ const toggleName = () => {
         </b-tr>
       </b-tbody>
     </b-table>
-    <h2>掲載された記事一覧</h2>
+    <h2>記事一覧</h2>
     <b-table>
       <b-thead>
         <b-tr>
@@ -110,7 +129,31 @@ const toggleName = () => {
         <b-tr>
           <b-td>2023年</b-td>
           <b-td
-            >マイクロソフト<a
+            >Be,想空間様<a
+              href="https://www.youtube.com/@DIY-tu9nl"
+              >(Link)</a
+            ></b-td
+          >
+          <b-td
+            >1年以上動画編集をアルバイトで受託しています。</b-td
+          >
+        </b-tr>
+        <b-tr>
+          <b-td>2023年</b-td>
+          <b-td
+            >ロート製薬様<a
+              href="https://www.instagram.com/reel/CyQRNNFyxnJ/?igshid=MWZjMTM2ODFkZg%3D%3D"
+              >(Link)</a
+            ></b-td
+          >
+          <b-td
+            >アルバイトで動画編集の担当をしました。</b-td
+          >
+        </b-tr>
+        <b-tr>
+          <b-td>2023年</b-td>
+          <b-td
+            >マイクロソフト様<a
               href="https://www.microsoft.com/ja-jp/industry/blog/microsoft-in-business/2023/04/20/mixed-reality-for-professional-education/"
               >(Link)</a
             ></b-td
@@ -122,7 +165,7 @@ const toggleName = () => {
         <b-tr>
           <b-td>2024年</b-td>
           <b-td
-            >マイクロソフト<a
+            >マイクロソフト様<a
               href="https://www.microsoft.com/ja-jp/industry/blog/microsoft-in-business/2024/04/05/case-study-utilization-of-azure-openai-service-by-students/"
               >(Link)</a
             ></b-td
@@ -135,7 +178,7 @@ const toggleName = () => {
         <b-tr>
           <b-td>2024年</b-td>
           <b-td
-            >インテル<a
+            >インテル様<a
               href="https://forest.watch.impress.co.jp/docs/special/1598339.html"
               >(Link)</a
             ></b-td
