@@ -3,12 +3,15 @@ const { BASE_URL, API_KEY } = process.env;
 
 export default defineNuxtConfig({
   components: true,
+
   future: {
     compatibilityVersion: 4,
   },
+
   experimental: {
     viewTransition: true,
   },
+
   modules: [
     "@vueuse/nuxt",
     "usebootstrap",
@@ -17,7 +20,9 @@ export default defineNuxtConfig({
     "@nuxt/image",
     "@nuxt/fonts",
   ],
+
   css: ["~/assets/css/default.css", "bootstrap/scss/bootstrap.scss"],
+
   app: {
     head: {
       title: "メルの図書館",
@@ -32,12 +37,14 @@ export default defineNuxtConfig({
     },
     pageTransition: { name: 'page', mode: 'out-in' }
   },
+
   runtimeConfig: {
     apiKey: API_KEY,
     public: {
       baseURL: BASE_URL,
     },
   },
+
   vite: {
     server: {
       watch: {
@@ -45,4 +52,6 @@ export default defineNuxtConfig({
       },
     },
   },
+
+  compatibilityDate: "2024-07-04",
 });

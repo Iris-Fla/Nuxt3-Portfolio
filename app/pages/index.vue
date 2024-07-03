@@ -9,6 +9,7 @@ useHead({
     { property: 'og:type', content: 'article' }
   ]
 })
+
 </script>
 <template>
   <Container padding="10px">
@@ -16,14 +17,10 @@ useHead({
       <Col col="12 md-4" v-for="article in blog.contents" :key="article.id">
       <NuxtLink :to="`/${article.id}`" style="text-decoration: none; color: inherit;">
         <Card margin="b-3" :to="`/${article.id}`" class="card-style">
-          <CardImgTop :src="article.thumbnail.url" alt="Article image" class="thumbnail-image" />
-          <CardBody>
-            <CardTitle margin="b-3"><strong>{{ article.title }}</strong></CardTitle>
-            <!-- <div class="tag-style">
-              <p v-for="tag in article.tags" :key="tag.id">
-                    {{ tag.name }}
-              </p>
-            </div> -->
+          <CardImgTop :src="article.thumbnail.url" alt="Article image"/>
+          <CardBody style="padding-top: 7px;">
+            <CardText><SkillIcons :useSkill= "$formatTags(article.tags)" /></CardText>
+            <CardTitle margin="b-3">{{ article.title }}</CardTitle>
             <CardText small style="opacity: 0.8;">
               <BIcon margin="e-1" icon="bi:clock" />{{ $formatDate(String(article.publishedAt)) }}
             </CardText>
@@ -36,8 +33,8 @@ useHead({
 </template>
 <style scoped>
 .card-style {
-  color: #33272a;
-  background-color: #fffffe;
+  color: #000000;
+  background-color: #f4f2ed;
   transition: all 0.3s ease-in-out;
   box-shadow: 0 0 5px #bdbdbd;
 }

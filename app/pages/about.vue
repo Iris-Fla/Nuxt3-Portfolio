@@ -56,7 +56,7 @@ const toggleName = () => {
       <h2>技術スタック<span class="mini-text">skillicons</span></h2>
       <p align="center">
         <img
-          src="https://skillicons.dev/icons?i=ai,pr,xd,nuxtjs,nextjs,azure,python,django,vuejs,react,vite,typescript,javascript,css,html,bootstrap,vscode&theme=light"
+          src="https://go-skill-icons.vercel.app/api/icons?i=ai,pr,xd,nuxtjs,nextjs,azure,python,django,vuejs,react,vite,typescript,javascript,css,html,bootstrap,vscode&theme=light&perline=50"
           alt="技術スタック"
         />
       </p>
@@ -79,11 +79,11 @@ const toggleName = () => {
       <b-tbody>
         <b-tr>
           <b-td>Github</b-td>
-          <b-td><NuxtLink href="https://github.com/Iris-Fla">Link</NuxtLink></b-td>
+          <b-td><NuxtLink to="https://github.com/Iris-Fla">Link</NuxtLink></b-td>
         </b-tr>
         <b-tr>
           <b-td>X</b-td>
-          <b-td><NuxtLink href="https://x.com/Iris_Flandre">Link</NuxtLink></b-td>
+          <b-td><NuxtLink to="https://x.com/Iris_Flandre">Link</NuxtLink></b-td>
         </b-tr>
       </b-tbody>
     </b-table>
@@ -116,88 +116,109 @@ const toggleName = () => {
         </b-tr>
       </b-tbody>
     </b-table>
-    <h2>記事一覧</h2>
+    <h2>主な活動記録</h2>
     <b-table>
       <b-thead>
         <b-tr>
           <b-th scope="col"> 年月 </b-th>
           <b-th scope="col"> Link </b-th>
           <b-th scope="col"> 取り組んだこと(要約) </b-th>
+          <b-th scope="col"> 使用技術</b-th>
         </b-tr>
       </b-thead>
       <b-tbody>
         <b-tr>
           <b-td>2023年</b-td>
           <b-td
-            >Be,想空間様<a
-              href="https://www.youtube.com/@DIY-tu9nl"
-              >Youtubeチャンネル</a
+            >Be,想空間様<NuxtLink
+              to="https://www.youtube.com/@DIY-tu9nl" target="_blank"
+              >(Youtubeチャンネル)</NuxtLink
             ></b-td
           >
           <b-td
-            >株式会社Be,想空間様の施工事例の動画編集を1年以上受託しています。<br/>編集・サムネイル制作にAdobePremireProとAdobeIllustratorを使用しています。</b-td
+            >株式会社Be,想空間様の施工事例の動画編集・サムネイル制作を1年以上受託しています。</b-td
           >
+          <b-td><SkillIcons useSkill="ai,pr" /></b-td>
         </b-tr>
         <b-tr>
           <b-td>2023年</b-td>
           <b-td
-            >ロート製薬様<a
-              href="https://www.instagram.com/reel/CyQRNNFyxnJ/?igshid=MWZjMTM2ODFkZg%3D%3D"
-              >Instagramリール動画</a
+            >ロート製薬様<NuxtLink
+              to="https://www.instagram.com/reel/CyQRNNFyxnJ/?igshid=MWZjMTM2ODFkZg%3D%3D" target="_blank"
+              >(Instagramリール動画)</NuxtLink
             ></b-td
           >
           <b-td
-            >SKIO VC ホワイトピールセラムのInstagramの宣伝動画を制作しました。</b-td
+            >美容化粧品 SKIO VC ホワイトピールセラムのInstagramの宣伝動画を制作しました。</b-td
           >
+          <b-td><SkillIcons useSkill="pr" /></b-td>
         </b-tr>
         <b-tr>
           <b-td>2023年</b-td>
           <b-td
-            >マイクロソフト様<a
-              href="https://www.microsoft.com/ja-jp/industry/blog/microsoft-in-business/2023/04/20/mixed-reality-for-professional-education/"
-              >記事リンク</a
+            >マイクロソフト様<NuxtLink
+              to="https://www.microsoft.com/ja-jp/industry/blog/microsoft-in-business/2023/04/20/mixed-reality-for-professional-education/" target="_blank"
+              >(記事)</NuxtLink
             ></b-td
           >
           <b-td
             >MRデバイス(Hololens2)とMicrosoftDynamics365を用いてサークル紹介のデモを制作し、サークルに興味がある人にMRの紹介を行いました。</b-td
           >
+          <b-td><SkillIcons useSkill="azure" /></b-td>
+        </b-tr>
+        <b-tr>
+          <b-td>2023年-(2024/7月 継続中)</b-td>
+          <b-td
+            >シンプリス株式会社様<NuxtLink
+              to="https://usebootstrap.org/" target="_blank"
+              >(ドキュメントサイト)</NuxtLink
+            ></b-td
+          >
+          <b-td
+            >学生アルバイトでNuxt.js用のパッケージ"usebootstrap"のドキュメントページやデモの制作等を行っています。</b-td
+          >
+          <b-td><SkillIcons useSkill="nuxtjs,typescript" /></b-td>
         </b-tr>
         <b-tr>
           <b-td>2024年</b-td>
           <b-td
-            >マイクロソフト様<a
-              href="https://www.microsoft.com/ja-jp/industry/blog/microsoft-in-business/2024/04/05/case-study-utilization-of-azure-openai-service-by-students/"
-              >記事リンク</a
+            >マイクロソフト様<NuxtLink
+              to="https://www.microsoft.com/ja-jp/industry/blog/microsoft-in-business/2024/04/05/case-study-utilization-of-azure-openai-service-by-students/" target="_blank"
+              >(記事)</NuxtLink
             ></b-td
           >
           <b-td
             >Azure OpenAI
             を用いて、学内の利便性を向上させる事を目的に学生とキャリアセンターが連携できる就活サイトの開発をチームで行いました。</b-td
           >
+          <b-td><SkillIcons useSkill="azure,nuxtjs,typescript" /></b-td>
         </b-tr>
         <b-tr>
           <b-td>2024年</b-td>
           <b-td
-            >インテル様<a
-              href="https://www.intel.co.jp/content/www/jp/ja/events/ai-app-dev-using-openvino-contest-for-students.html"
-              >記事リンク</a
+            >インテル様<NuxtLink
+              to="https://www.intel.co.jp/content/www/jp/ja/events/ai-app-dev-using-openvino-contest-for-students.html" target="_blank"
+              >(記事)</NuxtLink
             ></b-td
+
           >
           <b-td
-            >Intel社が開催したOpenVinoとAipcを活用したアプリケーション開発コンテストで最優秀賞を頂いた際の記事です。</b-td
+            >株式会社インテル様主催のOpenVinoとAI PC(NPU)を活用した学生アプリケーション開発コンテストで最優秀賞を頂いた際の記事です。</b-td
           >
+          <b-td><SkillIcons useSkill="python" /></b-td>
         </b-tr>
         <b-tr>
           <b-td>2024年</b-td>
           <b-td
-            >窓の杜様<a
-              href="https://forest.watch.impress.co.jp/docs/special/1598339.html"
-              >記事リンク</a
+            >窓の杜様<NuxtLink
+              to="https://forest.watch.impress.co.jp/docs/special/1598339.html" target="_blank"
+              >(記事)</NuxtLink
             ></b-td
           >
           <b-td
             >東京で行われたIntelAiSummitのプログラム内で学生コンテストのプレゼンテーションを発表した際の記事です。</b-td
           >
+          <b-td><SkillIcons/></b-td>
         </b-tr>
       </b-tbody>
     </b-table>
