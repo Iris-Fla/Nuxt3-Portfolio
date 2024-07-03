@@ -122,7 +122,7 @@ const toggleName = () => {
         <b-tr>
           <b-th scope="col"> 年月 </b-th>
           <b-th scope="col"> Link </b-th>
-          <b-th scope="col"> 取り組んだこと </b-th>
+          <b-th scope="col"> 取り組んだこと(要約) </b-th>
         </b-tr>
       </b-thead>
       <b-tbody>
@@ -131,11 +131,11 @@ const toggleName = () => {
           <b-td
             >Be,想空間様<a
               href="https://www.youtube.com/@DIY-tu9nl"
-              >(Link)</a
+              >Youtubeチャンネル</a
             ></b-td
           >
           <b-td
-            >1年以上動画編集をアルバイトで受託しています。</b-td
+            >株式会社Be,想空間様の施工事例の動画編集を1年以上受託しています。<br/>編集・サムネイル制作にAdobePremireProとAdobeIllustratorを使用しています。</b-td
           >
         </b-tr>
         <b-tr>
@@ -143,11 +143,11 @@ const toggleName = () => {
           <b-td
             >ロート製薬様<a
               href="https://www.instagram.com/reel/CyQRNNFyxnJ/?igshid=MWZjMTM2ODFkZg%3D%3D"
-              >(Link)</a
+              >Instagramリール動画</a
             ></b-td
           >
           <b-td
-            >アルバイトで動画編集の担当をしました。</b-td
+            >SKIO VC ホワイトピールセラムのInstagramの宣伝動画を制作しました。</b-td
           >
         </b-tr>
         <b-tr>
@@ -155,11 +155,11 @@ const toggleName = () => {
           <b-td
             >マイクロソフト様<a
               href="https://www.microsoft.com/ja-jp/industry/blog/microsoft-in-business/2023/04/20/mixed-reality-for-professional-education/"
-              >(Link)</a
+              >記事リンク</a
             ></b-td
           >
           <b-td
-            >MRデバイス(Hololens2)を用いてサークル用のデモを製作し、新技術の紹介を行いました。</b-td
+            >MRデバイス(Hololens2)とMicrosoftDynamics365を用いてサークル紹介のデモを制作し、サークルに興味がある人にMRの紹介を行いました。</b-td
           >
         </b-tr>
         <b-tr>
@@ -167,24 +167,36 @@ const toggleName = () => {
           <b-td
             >マイクロソフト様<a
               href="https://www.microsoft.com/ja-jp/industry/blog/microsoft-in-business/2024/04/05/case-study-utilization-of-azure-openai-service-by-students/"
-              >(Link)</a
+              >記事リンク</a
             ></b-td
           >
           <b-td
             >Azure OpenAI
-            を使い学内の利便性を向上させる事を目的に学生とキャリアセンターが連携できる就活サイトの開発をチームで行いました。</b-td
+            を用いて、学内の利便性を向上させる事を目的に学生とキャリアセンターが連携できる就活サイトの開発をチームで行いました。</b-td
           >
         </b-tr>
         <b-tr>
           <b-td>2024年</b-td>
           <b-td
             >インテル様<a
-              href="https://forest.watch.impress.co.jp/docs/special/1598339.html"
-              >(Link)</a
+              href="https://www.intel.co.jp/content/www/jp/ja/events/ai-app-dev-using-openvino-contest-for-students.html"
+              >記事リンク</a
             ></b-td
           >
           <b-td
-            >Intel社が開催したOpenVinoとAipcを活用したアプリケーション開発コンテストで最優秀賞を頂き、東京で行われたIntelAiSummitのプログラム内でプレゼンテーションを発表した際の記事です。</b-td
+            >Intel社が開催したOpenVinoとAipcを活用したアプリケーション開発コンテストで最優秀賞を頂いた際の記事です。</b-td
+          >
+        </b-tr>
+        <b-tr>
+          <b-td>2024年</b-td>
+          <b-td
+            >窓の杜様<a
+              href="https://forest.watch.impress.co.jp/docs/special/1598339.html"
+              >記事リンク</a
+            ></b-td
+          >
+          <b-td
+            >東京で行われたIntelAiSummitのプログラム内で学生コンテストのプレゼンテーションを発表した際の記事です。</b-td
           >
         </b-tr>
       </b-tbody>
