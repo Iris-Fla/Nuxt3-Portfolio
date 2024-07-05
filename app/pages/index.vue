@@ -4,9 +4,9 @@ const { data: blog } = await useFetch('/api/blog');
 useHead({
   title: '記事一覧',
   meta: [
-    { property: 'og:title', content: '記事一覧' },
+    { property: 'og:title', content: 'メルの図書館' },
     { property: 'og:description', content: '私(Iris-Fla)の学んだ技術や課題解決のアウトプット一覧です。' },
-    { property: 'og:type', content: 'article' }
+    { property: 'og:type', content: 'website' }
   ]
 })
 
