@@ -66,6 +66,7 @@ onMounted(() => {
   margin-right: auto;
   width: 100%;
   height: auto;
+  aspect-ratio:  4 / 3 ;
   box-shadow: 0 0 20px #5c5c5c;
   margin-bottom: 50px;
   margin-top: 50px;

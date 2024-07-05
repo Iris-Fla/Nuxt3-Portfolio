@@ -1,5 +1,6 @@
 <template>
   <div class="defaultBackground kiwi">
+    <NuxtLoadingIndicator color="#8bdaff" :height="5" :duration="4000" :throttle="100" />
     <Header />
     <slot />
     <Footer />

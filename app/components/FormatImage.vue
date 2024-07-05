@@ -1,5 +1,5 @@
 <template>
-    <NuxtImg format="webp" :src="formatImageUrl" :alt="alt" loading="lazy" />
+    <NuxtImg fit="outside" format="webp" :src="formatImageUrl" :alt="alt" placeholder loading="lazy" />
 </template>
 <script setup>
 
@@ -11,7 +11,7 @@ const props = defineProps({
     alt: {
         type: String,
         required: true
-    }
+    },
 });
 
 const formatImageUrl = computed(() => {
