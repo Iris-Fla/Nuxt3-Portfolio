@@ -27,7 +27,7 @@
     "ipx": "^3.0.1",
     "nuxt-icon": "^0.6.10",
     "pinia": "^2.1.7",
-    "usebootstrap": "^3.5.8",
+    "usebootstrap": "^3.5.9",
     "usebootstrap-docs": "^0.0.45"
   }
 }

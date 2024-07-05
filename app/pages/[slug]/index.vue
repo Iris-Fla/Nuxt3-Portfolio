@@ -52,7 +52,7 @@ onMounted(() => {
       <b-p class="publishedAt">
         投稿日:{{ $formatDate(String(article.publishedAt)) }}
       </b-p>
-      <img class="thumbnail-image" :src="article.thumbnail.url" />
+      <FormatImage :src="article.thumbnail.url" :alt="article.title" class="thumbnail-image" />
       <div v-if="body" class="article" v-html="body">
       </div>
     </main>

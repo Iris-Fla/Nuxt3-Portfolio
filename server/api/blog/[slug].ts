@@ -12,7 +12,7 @@ export default defineEventHandler(async (event) => {
   }
 
   try {
-    const response = await $fetch(`/blog/${slug}?fm=webp?width=200`, {
+    const response = await $fetch(`/blog/${slug}`, {
       baseURL: config.public.baseURL,
       headers: {
         "X-MICROCMS-API-KEY": config.apiKey,
