@@ -53,7 +53,8 @@ onMounted(() => {
         投稿日:{{ $formatDate(String(article.publishedAt)) }}
       </b-p>
       <FormatImage :src="article.thumbnail.url" :alt="article.title" class="thumbnail-image" />
-      <div v-if="body" class="article" v-html="body">
+      <Toc selector="#article-content" />
+      <div v-if="body" class="article" v-html="body" id="article-content">
       </div>
     </main>
   </Container>
@@ -66,7 +67,6 @@ onMounted(() => {
   margin-right: auto;
   width: 100%;
   height: auto;
-  aspect-ratio:  4 / 3 ;
   box-shadow: 0 0 20px #5c5c5c;
   margin-bottom: 50px;
   margin-top: 50px;
