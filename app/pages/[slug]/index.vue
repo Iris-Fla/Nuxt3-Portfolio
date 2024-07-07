@@ -53,7 +53,7 @@ onMounted(() => {
         投稿日:{{ $formatDate(String(article.publishedAt)) }}
       </b-p>
       <FormatImage :src="article.thumbnail.url" :alt="article.title" class="thumbnail-image" />
-      <Toc selector="#article-content" />
+      <Toc class="toc" selector="#article-content" />
       <div v-if="body" class="article" v-html="body" id="article-content">
       </div>
     </main>
@@ -70,6 +70,10 @@ onMounted(() => {
   box-shadow: 0 0 20px #5c5c5c;
   margin-bottom: 50px;
   margin-top: 50px;
+}
+
+.toc :active{
+  border-color:rgb(29, 166, 190);
 }
 
 </style>
