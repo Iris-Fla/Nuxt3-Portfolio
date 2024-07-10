@@ -9,6 +9,7 @@ useHead({
     { property: 'og:type', content: 'website' }
   ]
 })
+console.log(blog)
 
 </script>
 <template>

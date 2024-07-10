@@ -23,11 +23,11 @@
     "cheerio": "^1.0.0-rc.12",
     "dayjs": "^1.11.11",
     "gsap": "^3.12.5",
-    "highlight.js": "^11.9.0",
+    "highlight.js": "^11.10.0",
     "ipx": "^3.0.1",
     "nuxt-icon": "^0.6.10",
     "pinia": "^2.1.7",
-    "usebootstrap": "^3.5.9",
+    "usebootstrap": "^3.5.15",
     "usebootstrap-docs": "^0.0.45"
   }
 }
