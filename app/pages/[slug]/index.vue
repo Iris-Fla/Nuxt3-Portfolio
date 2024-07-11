@@ -53,7 +53,6 @@ onMounted(() => {
         投稿日:{{ $formatDate(String(article.publishedAt)) }}
       </b-p>
       <FormatImage :src="article.thumbnail.url" :alt="article.title" class="thumbnail-image" />
-      <Toc class="toc" selector="#article-content" />
       <div v-if="body" class="article" v-html="body" id="article-content">
       </div>
     </main>
