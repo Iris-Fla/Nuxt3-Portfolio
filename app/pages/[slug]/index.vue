@@ -53,6 +53,13 @@ onMounted(() => {
         投稿日:{{ $formatDate(String(article.publishedAt)) }}
       </b-p>
       <FormatImage :src="article.thumbnail.url" :alt="article.title" class="thumbnail-image" />
+      <Toc selector="#article-content" class="toc">
+        <Localization>
+          <template #en>
+            項目
+          </template>
+        </Localization>
+      </Toc>
       <div v-if="body" class="article" v-html="body" id="article-content">
       </div>
     </main>
@@ -70,13 +77,14 @@ onMounted(() => {
   margin-bottom: 50px;
   margin-top: 50px;
 }
-
-.toc :active{
-  border-color:rgb(29, 166, 190);
-}
-
 </style>
 <style>
+.toc .active {
+  color: #8bdaff !important;
+  border-color: #8bdaff;
+  border-style: none none none solid;
+}
+
 .custom-image {
   display: block;
   margin-left: auto;
@@ -98,6 +106,16 @@ h1 {
 
 h3 {
   margin-top: 20px;
+  display: flex;
+  align-items: center;
+}
+
+h3::after {
+  content: "";
+  flex-grow: 1;
+  height: 1px;
+  background-color: #aaaaaa;
+  margin-left: 10px;
 }
 
 a {
@@ -137,16 +155,19 @@ h2::after {
 
 p {
   color: rgb(0, 0, 0);
-  margin: 0.5px;
+  margin-top: 0.5px;
+  margin-bottom: 0.5px;
+  line-height: 1.9;
 }
 
 li {
-  margin-top: 2em;
-  margin-bottom: 2em;
+  margin-top: 1em;
+  margin-bottom: 1em;
 }
 
-pre {
-  margin:5px;
+code {
+  margin-top: 2px;
+  border-radius: 5px;
 }
 
 
