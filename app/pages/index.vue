@@ -15,7 +15,7 @@ console.log(blog)
 <template>
   <Container padding="10px">
     <Row>
-      <Col col="12 md-4" v-for="article in blog.contents" :key="article.id">
+      <Col col="12 xl-3 lg-4 md-6" v-for="article in blog.contents" :key="article.id">
       <NuxtLink :to="`/${article.id}`" style="text-decoration: none; color: inherit;">
         <Card margin="b-3" :to="`/${article.id}`" class="card-style">
           <FormatImage :src="article.thumbnail.url" :alt="article.title" />

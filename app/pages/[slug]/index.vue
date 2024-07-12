@@ -85,6 +85,14 @@ onMounted(() => {
   border-style: none none none solid;
 }
 
+.toc :hover {
+  border-color: #8bdaff;
+  color: #8bdaff !important;
+}
+.toc :hover #text{
+  background-color: #8bdaff;
+}
+
 .custom-image {
   display: block;
   margin-left: auto;
@@ -113,9 +121,10 @@ h3 {
 h3::after {
   content: "";
   flex-grow: 1;
-  height: 1px;
-  background-color: #aaaaaa;
-  margin-left: 10px;
+  height: 5px;
+  background-color: #8bdaff;
+  margin-left: 20px;
+  border-radius: 5px;
 }
 
 a {
@@ -165,10 +174,10 @@ li {
   margin-bottom: 1em;
 }
 
-code {
-  margin-top: 2px;
+pre {
   border-radius: 5px;
+  margin-top: 2px;
+  margin-bottom: 2px;
 }
-
 
 </style>
