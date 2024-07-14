@@ -106,24 +106,24 @@ onMounted(() => {
 }
 
 .toc a {
-  position: relative; /* 疑似要素の配置の基準点とする */
+  position: relative;
 }
 
 .toc a::after {
-  content: ""; /* 疑似要素にはcontentが必要ですが、ここでは空にします */
+  content: "";
   position: absolute;
-  width: 100%; /* 親要素と同じ幅 */
-  height: 100%; /* 親要素と同じ高さ */
+  width: 100%;
+  height: 100%;
   left: 0;
   top: 0;
   background-color: rgba(206, 206, 206, 0.2) ;
-  z-index: -1; /* 要素の後ろに配置 */
-  opacity: 0; /* 初期状態では透明 */
-  transition: opacity 0.3s; /* アニメーション効果 */
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.3s;
 }
 
 .toc a:hover::after {
-  opacity: 1; /* ホバー時に背景色を表示 */
+  opacity: 1;
 }
 
 .sticky-toc {
