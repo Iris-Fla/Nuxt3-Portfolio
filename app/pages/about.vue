@@ -38,8 +38,6 @@ const toggleName = () => {
 </script>
 <template>
   <Container>
-    <div></div>
-
     <div class="profile-header">
       <div class="profile-icon">
         <img src="/profile.jpg" alt="プロフィールアイコン" />
@@ -52,16 +50,6 @@ const toggleName = () => {
         </transition>
       </div>
     </div>
-    <div class="skills-section mb-4" :class="{ animate: startAnimation }">
-      <h2>技術スタック<span class="mini-text">skillicons</span></h2>
-      <p align="center">
-        <img
-          src="https://go-skill-icons.vercel.app/api/icons?i=ai,pr,xd,nuxtjs,nextjs,azure,python,django,vuejs,react,vite,typescript,javascript,css,html,bootstrap,vscode&theme=light&perline=50"
-          alt="技術スタック"
-        />
-      </p>
-    </div>
-
     <div class="skills-section about-me" :class="{ animate: startAnimation }">
       <h2>自己紹介</h2>
       <p>
