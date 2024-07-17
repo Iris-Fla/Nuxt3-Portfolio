@@ -52,11 +52,14 @@ onMounted(() => {
         <b-p class="publishedAt">
           投稿日:{{ $formatDate(String(article.publishedAt)) }}
         </b-p>
-        <FormatImage
+        <NuxtImg
+          class="thumbnail-image"
           :src="article.thumbnail.url"
           :alt="article.title"
-          class="thumbnail-image"
-        />
+          fit="cover"
+          format="webp"
+          placeholder
+          loading="lazy"/>
         <Toc selector="#article-content" class="toc d-lg-none">
           <Localization>
             <template #en> 項目 </template>

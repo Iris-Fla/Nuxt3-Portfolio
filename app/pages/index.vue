@@ -9,7 +9,6 @@ useHead({
     { property: 'og:type', content: 'website' }
   ]
 })
-console.log(blog)
 
 </script>
 <template>
@@ -18,7 +17,8 @@ console.log(blog)
       <Col col="12 xl-3 lg-4 md-6" v-for="article in blog.contents" :key="article.id">
       <NuxtLink :to="`/${article.id}`" style="text-decoration: none; color: inherit;">
         <Card margin="b-3" :to="`/${article.id}`" class="card-style">
-          <FormatImage :src="article.thumbnail.url" :alt="article.title" />
+          <NuxtImg :src="article.thumbnail.url" :alt="article.title" fit="cover" format="webp" placeholder quality="80"/>
+          <!-- <FormatImage :src="article.thumbnail.url" :alt="article.title" /> -->
           <CardBody style="padding-top: 7px;">
             <CardText><SkillIcons :useSkill= "$formatTags(article.tags)" /></CardText>
             <CardTitle margin="b-3">{{ article.title }}</CardTitle>

@@ -1,20 +1,25 @@
 <template>
-    <NuxtImg fit="outside" format="webp" :src="formatImageUrl" :alt="alt" placeholder loading="lazy" />
-</template>
-<script setup>
-
-const props = defineProps({
+    <NuxtImg
+      fit="cover"
+      format="webp"
+      :src="formatImageUrl"
+      :alt="alt"
+      placeholder
+      loading="lazy"
+    />
+  </template>
+  
+  <script setup>
+  const props = defineProps({
     src: {
-        type: String,
-        required: true
+      type: String,
+      required: true
     },
     alt: {
-        type: String,
-        required: true
-    },
-});
-
-const formatImageUrl = computed(() => {
-    return `${props.src}?fm=webp`;
-});
-</script>
+      type: String,
+      required: true
+    }
+  });
+  
+  const formatImageUrl = computed(() => `${props.src}?fm=webp`);
+  </script>

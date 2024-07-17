@@ -2,7 +2,7 @@ export default defineEventHandler(async (event) => {
   const config = useRuntimeConfig()
 
   try {
-    const response = await $fetch('/blog', {
+    const response = await $fetch('/blog?fm=webp', {
       baseURL: config.public.baseURL,
       headers: {
         "X-MICROCMS-API-KEY": config.apiKey,
