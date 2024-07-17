@@ -4,6 +4,11 @@ const { BASE_URL, API_KEY } = process.env;
 export default defineNuxtConfig({
   components: true,
 
+  image: {
+    provider: 'ipx',
+    format: ['webp']
+  },
+
   future: {
     compatibilityVersion: 4,
   },
