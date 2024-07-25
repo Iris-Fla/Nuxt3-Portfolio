@@ -2,8 +2,10 @@
 開発ブログ→[Link](https://Iris-fla.me/portfolio)
 
 ## .envに書くこと!
+```
 BASE_URL="https://(yourdomain).microcms.io/api/v1"
 API_KEY="APIKey♡"
+```
 
 ## 今後の実装予定
 1.プロフィールページの演出。
