@@ -1,5 +1,5 @@
 <template>
-  <div class="defaultBackground kiwi">
+  <div class="defaultBackground shippori-antique-b1-regular">
     <NuxtLoadingIndicator color="#8bdaff" :height="5" :duration="4000" :throttle="100" />
     <Header />
     <slot />

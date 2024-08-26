@@ -45,7 +45,7 @@ onMounted(() => {
 
 <template>
   <Container>
-    <main class="kiwi main-color">
+    <main class="shippori-antique-b1-regular main-color">
       <Row justify-content="end">
         <Col col="12 lg-8">
         <BH1 class="title">{{ article.title }}<span class="Cocoa"></span></BH1>
