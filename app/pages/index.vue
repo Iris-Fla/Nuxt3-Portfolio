@@ -18,6 +18,7 @@ useHead({
       <NuxtLink :to="`/${article.id}`" style="text-decoration: none; color: inherit;">
         <Card margin="b-3" :to="`/${article.id}`" class="card-style">
           <CardBody style="padding-top: 7px;">
+            <NuxtImg :src="`${article.thumbnail.url}?fm=webp`" :alt="article.title" fit="cover" format="webp" placeholder quality="80"/>
             <CardText><SkillIcons :useSkill= "$formatTags(article.tags)" /></CardText>
             <CardTitle margin="b-3">{{ article.title }}</CardTitle>
             <CardText small style="opacity: 0.8;">
