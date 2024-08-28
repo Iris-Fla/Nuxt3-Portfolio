@@ -26,7 +26,7 @@ export default defineNuxtConfig({
     "@nuxt/fonts",
   ],
 
-  css: ["~/assets/css/default.css", "bootstrap/scss/bootstrap.scss"],
+  css: ["~/assets/css/default.scss", "bootstrap/scss/bootstrap.scss"],
 
   app: {
     head: {

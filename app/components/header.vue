@@ -8,9 +8,6 @@
           <NavItem class="NavItem">
             <NavLink href="/about">Profile</NavLink>
           </NavItem>
-          <NavItem  class="NavItem">
-            <NavLink href="/">Blog</NavLink>
-          </NavItem>
         </NavbarNavList>
       </NavbarCollapse>
     </Container>
