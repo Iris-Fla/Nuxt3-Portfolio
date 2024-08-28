@@ -40,9 +40,9 @@ const onImageLoad = (articleId) => {
               />
             </div>
             <CardBody style="padding-top: 7px;">
-              <CardText><SkillIcons :useSkill="$formatTags(article.tags)" /></CardText>
-              <CardTitle>{{ article.title }}</CardTitle>
-              <CardText small style="opacity: 0.8;">
+              <SkillIcons style="margin-top: 5px;" :useSkill="$formatTags(article.tags)" />
+              <CardTitle margin="t-2">{{ article.title }}</CardTitle>
+              <CardText small style="opacity: 0.8; color: antiquewhite;">
                 <BIcon margin="e-1" icon="bi:clock" />{{ $formatDate(String(article.publishedAt)) }}
               </CardText>
             </CardBody>
@@ -56,8 +56,8 @@ const onImageLoad = (articleId) => {
 <style scoped lang="scss">
 
 .card-style {
-  color: #000000;
-  background-color: #f4f2ed;
+  color: $color-main;
+  background-color: $text-color-black;
   transition: all 0.3s ease-in-out;
   box-shadow: 0 0 5px #bdbdbd;
 }

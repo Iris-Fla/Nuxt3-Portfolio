@@ -50,7 +50,7 @@ const toggleName = () => {
         </transition>
       </div>
     </div>
-    <div class="skills-section about-me" :class="{ animate: startAnimation }">
+    <div class="skills-section" :class="{ animate: startAnimation }">
       <h2>自己紹介</h2>
       <p>
         ゼロからアプリケーションやサービスを企画し、自分一人でも実装出来るように色々な範囲を勉強しています。新しい物と技術が好きです。
@@ -111,7 +111,6 @@ const toggleName = () => {
           <b-th scope="col"> 年月 </b-th>
           <b-th scope="col"> Link </b-th>
           <b-th scope="col"> 取り組んだこと(要約) </b-th>
-          <b-th scope="col"> 使用技術</b-th>
         </b-tr>
       </b-thead>
       <b-tbody>
@@ -126,7 +125,6 @@ const toggleName = () => {
           <b-td
             >株式会社Be,想空間様の施工事例の動画編集・サムネイル制作を1年以上受託しています。</b-td
           >
-          <b-td><SkillIcons useSkill="ai,pr" /></b-td>
         </b-tr>
         <b-tr>
           <b-td>2023年</b-td>
@@ -139,7 +137,6 @@ const toggleName = () => {
           <b-td
             >美容化粧品 SKIO VC ホワイトピールセラムのInstagramの宣伝動画を制作しました。</b-td
           >
-          <b-td><SkillIcons useSkill="pr" /></b-td>
         </b-tr>
         <b-tr>
           <b-td>2023年</b-td>
@@ -152,7 +149,6 @@ const toggleName = () => {
           <b-td
             >MRデバイス(Hololens2)とMicrosoftDynamics365を用いてサークル紹介のデモを制作し、サークルに興味がある人にMRの紹介を行いました。</b-td
           >
-          <b-td><SkillIcons useSkill="azure" /></b-td>
         </b-tr>
         <b-tr>
           <b-td>2023年-(2024/7月 継続中)</b-td>
@@ -165,7 +161,6 @@ const toggleName = () => {
           <b-td
             >学生アルバイトでNuxt.js用のパッケージ"usebootstrap"のドキュメントページやデモの制作等を行っています。</b-td
           >
-          <b-td><SkillIcons useSkill="nuxtjs,typescript" /></b-td>
         </b-tr>
         <b-tr>
           <b-td>2024年</b-td>
@@ -179,7 +174,6 @@ const toggleName = () => {
             >Azure OpenAI
             を用いて、学内の利便性を向上させる事を目的に学生とキャリアセンターが連携できる就活サイトの開発をチームで行いました。</b-td
           >
-          <b-td><SkillIcons useSkill="azure,nuxtjs,typescript" /></b-td>
         </b-tr>
         <b-tr>
           <b-td>2024年</b-td>
@@ -193,7 +187,6 @@ const toggleName = () => {
           <b-td
             >株式会社インテル様主催のOpenVinoとAI PC(NPU)を活用した学生アプリケーション開発コンテストで最優秀賞を頂いた際の記事です。</b-td
           >
-          <b-td><SkillIcons useSkill="python" /></b-td>
         </b-tr>
         <b-tr>
           <b-td>2024年</b-td>
@@ -206,16 +199,15 @@ const toggleName = () => {
           <b-td
             >東京で行われたIntelAiSummitのプログラム内で学生コンテストのプレゼンテーションを発表した際の記事です。</b-td
           >
-          <b-td><SkillIcons/></b-td>
         </b-tr>
       </b-tbody>
     </b-table>
   </Container>
 </template>
 
-<style scoped>
+<style scoped lang="scss">
 h1 {
-  color: #000000;
+  color: $text-color-black;
   position: relative;
   padding-bottom: 15px;
   margin-top: 50px;
@@ -228,7 +220,7 @@ h3 {
 
 a {
   text-decoration: none;
-  color: rgb(29, 166, 190);
+  color: $color-secondary;
 }
 
 .mini-text {
@@ -243,7 +235,7 @@ h1::after {
   bottom: 0;
   height: 6px;
   width: 100%;
-  background-color: #8bdaff;
+  background-color: $color-secondary;
   border-radius: 5px;
 }
 
@@ -290,7 +282,7 @@ li {
   display: flex;
   align-items: center;
   padding: 20px;
-  border: 5px solid #8bdaff;
+  border: 5px solid $color-secondary;
   border-radius: 20px;
   margin-bottom: 30px;
 }
@@ -309,33 +301,11 @@ li {
   object-fit: cover;
 }
 
-.about-me {
-  background-color: #f8f8f8;
-  padding: 1.5rem;
-  border-radius: 8px;
-  margin-bottom: 2rem;
-}
-
 .about-me p {
   line-height: 1.6;
 }
 
 .about-me h2 {
   margin-top: 0px;
-}
-
-.skills-section {
-  opacity: 0;
-  transform: translateX(-50px);
-  transition: opacity 1s, transform 1s;
-}
-
-.skills-section.animate {
-  opacity: 1;
-  transform: translateX(0);
-}
-
-.skills-section img {
-  max-width: 90%;
 }
 </style>

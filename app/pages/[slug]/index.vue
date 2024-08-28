@@ -96,16 +96,16 @@ onMounted(() => {
   margin-top: 50px;
 }
 </style>
-<style>
+<style lang="scss">
 .toc .active {
-  color: #8bdaff !important;
-  border-color: #8bdaff;
+  color: $color-secondary !important;
+  border-color: $color-secondary;
   border-style: none none none solid;
 }
 
 .toc li :hover {
-  border-color: #8bdaff;
-  color: #8bdaff !important;
+  border-color: $color-secondary;
+  color: $color-secondary !important;
 }
 
 .toc a {
@@ -149,7 +149,7 @@ onMounted(() => {
   left: 0;
   right: 0;
   height: 3px;
-  background-image: linear-gradient(to right, #8bdaff 50%, transparent 50%);
+  background-image: linear-gradient(to right, $color-secondary 50%, transparent 50%);
   background-size: 10px 3px;
 }
 
@@ -157,39 +157,30 @@ onMounted(() => {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 100%;
+  max-width: 100%;
   height: auto;
   box-shadow: 0 0 10px #bdbdbd;
   margin-top: 20px;
   margin-bottom: 20px;
+  object-fit: contain;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &:active {
+    transform: scale(1.8);
+    box-shadow: 0 0 20px #999999; /* クリック時に影も強調 */
+  }
 }
 
 h1 {
-  color: #000000;
+  color: $text-color-black;
   position: relative;
   padding-bottom: 15px;
   margin-top: 50px;
   margin-bottom: 20px;
-}
-
-h3 {
-  margin-top: 20px;
-  display: flex;
-  align-items: center;
-}
-
-h3::after {
-  content: "";
-  flex-grow: 1;
-  height: 5px;
-  background-color: #8bdaff;
-  margin-left: 20px;
-  border-radius: 5px;
-}
-
-a {
-  text-decoration: none;
-  color: rgb(29, 166, 190);
 }
 
 h1::after {
@@ -200,7 +191,7 @@ h1::after {
   bottom: 0;
   height: 6px;
   width: 100%;
-  background-color: #8bdaff;
+  background-color: $color-secondary;
   border-radius: 5px;
 }
 
@@ -210,6 +201,7 @@ h2 {
   margin-bottom: 20px;
   position: relative;
 }
+
 h2::after {
   content: "";
   display: inline-block;
@@ -222,16 +214,36 @@ h2::after {
   border-radius: 3px;
 }
 
+h3 {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+}
+
+h3::after {
+  content: "";
+  flex-grow: 1;
+  height: 5px;
+  background-color: $color-secondary;
+  margin-left: 20px;
+  border-radius: 5px;
+}
+
 p {
-  color: rgb(0, 0, 0);
-  margin-top: 0.5px;
-  margin-bottom: 0.5px;
+  color: $text-color-black;
+  margin-top: 3px;
+  margin-bottom: 3px;
   line-height: 1.9;
 }
 
+a {
+  text-decoration: none;
+  color: $color-secondary;
+}
+
 li {
-  margin-top: 1em;
-  margin-bottom: 1em;
+  margin-top: 1px;
+  margin-bottom: 1px;
 }
 
 pre {

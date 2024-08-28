@@ -1,7 +1,57 @@
-$color-main:#fef3e7;
-$color-secondary:#6e8059;
-$color-tertiary:#1a1a1a;
-
 .defaultBackground {
-    background-color: $color-main;
+    background-color: #fef3e7;
+}
+
+.shippori-antique-b1-regular {
+  font-family: "Shippori Antique B1", sans-serif;
+  letter-spacing: 0.05em;
+}
+
+/* テーブル全体のスタイル */
+.table {
+  width: 100%;
+  border-collapse: separate; /* border-radiusを有効にするためにseparateに設定 */
+  border-spacing: 0; /* 境界線を正しく表示するためにspacingを0に */
+  background-color: #00000000; /* 淡い緑色の背景色 */
+  border-radius: 10px; /* テーブル全体の角を丸く */
+
+  /* テーブルの個別の境界線を設定 */
+  th, td {
+    border: 1px solid $color-secondary; /* 淡い緑色の境界線 */
   }
+
+  /* テーブルヘッダーのスタイル */
+  th {
+    background-color: #c4dfc3; /* ヘッダーを少し濃い淡い緑色に */
+    color: #4a5d4a; /* ダークグリーンのテキスト */
+    padding: 10px;
+    text-align: left;
+    border-bottom: 2px solid $color-secondary; /* 境界線も緑系で */
+  }
+
+  /* テーブルデータのスタイル */
+  td {
+    background-color: #00000000; /* ヘッダーとは微妙に異なる薄い緑 */
+    color: #333333; /* ダークグレーのテキスト */
+    padding: 10px;
+    border-bottom: 1px solid $color-secondary; /* 境界線も柔らかい色合いに */
+  }
+
+  /* 上下左右の角を丸くするスタイル */
+  th:first-child {
+    border-top-left-radius: 10px; /* 左上の角を丸く */
+  }
+
+  th:last-child {
+    border-top-right-radius: 10px; /* 右上の角を丸く */
+  }
+
+  tr:last-child td:first-child {
+    border-bottom-left-radius: 10px; /* 左下の角を丸く */
+  }
+
+  tr:last-child td:last-child {
+    border-bottom-right-radius: 10px; /* 右下の角を丸く */
+  }
+}
+

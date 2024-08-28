@@ -1,6 +1,6 @@
 <template>
   <div class="defaultBackground">
-    <NuxtLoadingIndicator color="#8bdaff" :height="5" :duration="4000" :throttle="100" />
+    <NuxtLoadingIndicator color="#6e8059" :height="5" :duration="4000" :throttle="100" />
     <Header />
     <slot />
     <Footer />

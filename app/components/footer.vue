@@ -5,11 +5,11 @@
         </div>
     </Container>
 </template>
-<style scoped>
+<style scoped lang="scss">
 
 a {
   text-decoration: none;
-  color: rgb(29, 166, 190);
+  color: $color-secondary;
 }
 
 .margin {

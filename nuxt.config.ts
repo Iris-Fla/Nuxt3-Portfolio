@@ -26,7 +26,7 @@ export default defineNuxtConfig({
     "@nuxt/fonts",
   ],
 
-  css: ["~/assets/css/default.scss", "bootstrap/scss/bootstrap.scss"],
+  css: ["~/assets/css/default.scss"],
 
   app: {
     head: {
@@ -51,6 +51,13 @@ export default defineNuxtConfig({
   },
 
   vite: {
+    css: {
+      preprocessorOptions: {
+        scss: {
+          additionalData: `@use "~/assets/_colors.scss" as *;`,
+        },
+      },
+    },
     server: {
       watch: {
         usePolling: true,
