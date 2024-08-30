@@ -59,11 +59,12 @@ const onImageLoad = (articleId) => {
   color: $color-main;
   background-color: $text-color-black;
   transition: all 0.3s ease-in-out;
-  box-shadow: 0 0 5px #bdbdbd;
+  box-shadow: 7px 7px 10px #2b2b2b;
 }
 
 .card-style:hover {
   transform: scale(0.95);
+  border-radius: 0% 0% 10% 10%;
 }
 
 .loading-indicator {
