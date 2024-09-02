@@ -207,7 +207,7 @@ const toggleName = () => {
 
 <style scoped lang="scss">
 h1 {
-  color: $text-color-black;
+  color: $color-black;
   position: relative;
   padding-bottom: 15px;
   margin-top: 50px;
