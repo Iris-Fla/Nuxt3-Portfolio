@@ -40,7 +40,7 @@ const toggleName = () => {
   <Container>
     <div class="profile-header">
       <div class="profile-icon">
-        <img src="/profile.jpg" alt="プロフィールアイコン" />
+        <img src="/omen_bangboo.png" alt="プロフィールアイコン" />
       </div>
       <div @click="toggleName">
         <transition name="fade" mode="out-in">

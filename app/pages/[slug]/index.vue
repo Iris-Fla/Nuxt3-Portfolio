@@ -196,7 +196,7 @@ h1::after {
 }
 
 h2 {
-  color: rgb(0, 0, 0);
+  color: $text-color-black;
   margin-top: 40px;
   margin-bottom: 20px;
   position: relative;
