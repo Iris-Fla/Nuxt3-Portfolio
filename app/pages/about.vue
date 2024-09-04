@@ -3,9 +3,8 @@
 <template>
   <div>
     <NuxtImg
-      src="/Header.png"
-      alt="Header"
-      format="webp"
+      src="/header.webp"
+      alt="header"
       class="header-image"
     />
     <Container type="fluid" class="background">
@@ -19,8 +18,8 @@
       <hr />
       <div class="text-center">
         <div class="image-container">
-          <img
-            src="/omen.png"
+          <NuxtImg
+            src="/omen.webp"
             alt="icon"
             class="profile-icon"
           />
