@@ -3,7 +3,7 @@
 <template>
   <div>
     <NuxtImg
-      src="/header.webp"
+      src="images/header.webp"
       alt="header"
       class="header-image"
     />
@@ -19,7 +19,7 @@
       <div class="text-center">
         <div class="image-container">
           <NuxtImg
-            src="/omen.webp"
+            src="images/omen.webp"
             alt="icon"
             class="profile-icon"
           />
@@ -105,7 +105,7 @@
       <Row margin="t-4" class="row-cards">
         <Col col="4">
           <Card class="image-container">
-            <CardImg src="/sample1.webp" alt="..." class="col-card" />
+            <CardImg src="images/sample1.webp" alt="..." class="col-card" />
             <div class="overlay">
               <p class="overlay-text kosugi-maru-regular">文化祭ポスター</p>
             </div>
@@ -113,7 +113,7 @@
         </Col>
         <Col col="4">
           <Card class="image-container">
-            <CardImg src="/sample2.webp" alt="..." class="col-card" />
+            <CardImg src="images/sample2.webp" alt="..." class="col-card" />
             <div class="overlay">
               <p class="overlay-text kosugi-maru-regular">サークルポスター</p>
             </div>
@@ -121,7 +121,7 @@
         </Col>
         <Col col="4">
           <Card class="image-container">
-            <CardImg src="/sample3.webp" alt="..." class="col-card" />
+            <CardImg src="images/sample3.webp" alt="..." class="col-card" />
             <div class="overlay">
               <p class="overlay-text kosugi-maru-regular">サークルポスター2</p>
             </div>
