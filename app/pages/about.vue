@@ -19,10 +19,9 @@
       <hr />
       <div class="text-center">
         <div class="image-container">
-          <NuxtImg
-            src="/omen_bangboo.png"
+          <img
+            src="/omen.png"
             alt="icon"
-            format="webp"
             class="profile-icon"
           />
           <div class="overlay-circle">
@@ -107,7 +106,7 @@
       <Row margin="t-4" class="row-cards">
         <Col col="4">
           <Card class="image-container">
-            <CardImg src="/pos_1.webp" alt="..." class="col-card" />
+            <CardImg src="/sample1.webp" alt="..." class="col-card" />
             <div class="overlay">
               <p class="overlay-text kosugi-maru-regular">文化祭ポスター</p>
             </div>
@@ -115,7 +114,7 @@
         </Col>
         <Col col="4">
           <Card class="image-container">
-            <CardImg src="/pos_2.webp" alt="..." class="col-card" />
+            <CardImg src="/sample2.webp" alt="..." class="col-card" />
             <div class="overlay">
               <p class="overlay-text kosugi-maru-regular">サークルポスター</p>
             </div>
@@ -123,7 +122,7 @@
         </Col>
         <Col col="4">
           <Card class="image-container">
-            <CardImg src="/pos_3.webp" alt="..." class="col-card" />
+            <CardImg src="/sample3.webp" alt="..." class="col-card" />
             <div class="overlay">
               <p class="overlay-text kosugi-maru-regular">サークルポスター2</p>
             </div>
