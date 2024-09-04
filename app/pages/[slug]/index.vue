@@ -176,7 +176,7 @@ onMounted(() => {
 }
 
 h1 {
-  color: $text-color-black;
+  color: $color-black;
   position: relative;
   padding-bottom: 15px;
   margin-top: 50px;
@@ -196,7 +196,7 @@ h1::after {
 }
 
 h2 {
-  color: rgb(0, 0, 0);
+  color: $color-black;
   margin-top: 40px;
   margin-bottom: 20px;
   position: relative;
@@ -230,7 +230,7 @@ h3::after {
 }
 
 p {
-  color: $text-color-black;
+  color: $color-black;
   margin-top: 3px;
   margin-bottom: 3px;
   line-height: 1.9;

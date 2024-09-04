@@ -19,6 +19,7 @@ const onImageLoad = (articleId) => {
 
 <template>
   <Container padding="10px">
+    <BH1 class="title">記事一覧</BH1>
     <div v-if="status === 'pending' || status === 'idle'" class="loading-indicator">
       <p>読み込み中...!</p>
     </div>
@@ -57,13 +58,14 @@ const onImageLoad = (articleId) => {
 
 .card-style {
   color: $color-main;
-  background-color: $text-color-black;
+  background-color: $color-black;
   transition: all 0.3s ease-in-out;
-  box-shadow: 0 0 5px #bdbdbd;
+  box-shadow: 7px 7px 10px #2b2b2b;
 }
 
 .card-style:hover {
   transform: scale(0.95);
+  border-radius: 0% 0% 10% 10%;
 }
 
 .loading-indicator {
