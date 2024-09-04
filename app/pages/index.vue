@@ -1,14 +1,17 @@
 <script setup>
-const { data: blog, status } = await useFetch('/api/blog');
+const { data: blog, status } = await useFetch("/api/blog");
 
 useHead({
-  title: '記事一覧',
+  title: "記事一覧",
   meta: [
-    { property: 'og:title', content: 'メルの図書館' },
-    { property: 'og:description', content: '私(Iris-Fla)の学んだ技術や課題解決のアウトプット一覧です。' },
-    { property: 'og:type', content: 'website' }
-  ]
-})
+    { property: "og:title", content: "メルの図書館" },
+    {
+      property: "og:description",
+      content: "私(Iris-Fla)の学んだ技術や課題解決のアウトプット一覧です。",
+    },
+    { property: "og:type", content: "website" },
+  ],
+});
 
 const imageLoaded = ref({});
 
@@ -18,44 +21,63 @@ const onImageLoad = (articleId) => {
 </script>
 
 <template>
-  <Container padding="10px">
-    <BH1 class="title">記事一覧</BH1>
-    <div v-if="status === 'pending' || status === 'idle'" class="loading-indicator">
-      <p>読み込み中...!</p>
-    </div>
-    <Row v-else>
-      <Col col="12 xl-3 lg-4 md-6" v-for="article in blog.contents" :key="article.id">
-        <NuxtLink :to="`/${article.id}`" style="text-decoration: none; color: inherit;">
-          <Card margin="b-3" class="card-style">
-            <div class="image-container">
-              <div v-if="!imageLoaded[article.id]" class="skeleton-loader"></div>
-              <NuxtImg
-                :src="`${article.thumbnail.url}?fm=webp`"
-                :alt="article.title"
-                fit="cover"
-                format="webp"
-                placeholder
-                quality="80"
-                @load="onImageLoad(article.id)"
-                :class="{ 'loaded': imageLoaded[article.id] }"
-              />
-            </div>
-            <CardBody style="padding-top: 7px;">
-              <SkillIcons style="margin-top: 5px;" :useSkill="$formatTags(article.tags)" />
-              <CardTitle margin="t-2">{{ article.title }}</CardTitle>
-              <CardText small style="opacity: 0.8; color: antiquewhite;">
-                <BIcon margin="e-1" icon="bi:clock" />{{ $formatDate(String(article.publishedAt)) }}
-              </CardText>
-            </CardBody>
-          </Card>
-        </NuxtLink>
-      </Col>
-    </Row>
-  </Container>
+  <div>
+    <Container padding="10px">
+      <BH1 class="title">記事一覧</BH1>
+      <div
+        v-if="status === 'pending' || status === 'idle'"
+        class="loading-indicator"
+      >
+        <p>読み込み中...!</p>
+      </div>
+      <Row v-else>
+        <Col
+          col="12 xl-3 lg-4 md-6"
+          v-for="article in blog.contents"
+          :key="article.id"
+        >
+          <NuxtLink
+            :to="`/${article.id}`"
+            style="text-decoration: none; color: inherit"
+          >
+            <Card margin="b-3" class="card-style">
+              <div class="image-container">
+                <div
+                  v-if="!imageLoaded[article.id]"
+                  class="skeleton-loader"
+                ></div>
+                <NuxtImg
+                  :src="`${article.thumbnail.url}?fm=webp`"
+                  :alt="article.title"
+                  fit="cover"
+                  format="webp"
+                  placeholder
+                  quality="80"
+                  @load="onImageLoad(article.id)"
+                  :class="{ loaded: imageLoaded[article.id] }"
+                />
+              </div>
+              <CardBody style="padding-top: 7px">
+                <SkillIcons
+                  style="margin-top: 5px"
+                  :useSkill="$formatTags(article.tags)"
+                />
+                <CardTitle margin="t-2">{{ article.title }}</CardTitle>
+                <CardText small style="opacity: 0.8; color: antiquewhite">
+                  <BIcon margin="e-1" icon="bi:clock" />{{
+                    $formatDate(String(article.publishedAt))
+                  }}
+                </CardText>
+              </CardBody>
+            </Card>
+          </NuxtLink>
+        </Col>
+      </Row>
+    </Container>
+  </div>
 </template>
 
 <style scoped lang="scss">
-
 .card-style {
   color: $color-main;
   background-color: $color-black;

@@ -44,44 +44,52 @@ onMounted(() => {
 </script>
 
 <template>
-  <Container>
-    <main class="shippori-antique-b1-regular main-color">
-      <Row justify-content="end">
-        <Col col="12 lg-8">
-        <BH1 class="title">{{ article.title }}<span class="Cocoa"></span></BH1>
-        <b-p class="publishedAt">
-          投稿日:{{ $formatDate(String(article.publishedAt)) }}
-        </b-p>
-        <NuxtImg
-          class="thumbnail-image"
-          :src="article.thumbnail.url"
-          :alt="article.title"
-          fit="cover"
-          format="webp"
-          placeholder
-          loading="lazy"/>
-        <Toc selector="#article-content" class="toc d-lg-none">
-          <Localization>
-            <template #en> 項目 </template>
-          </Localization>
-        </Toc>
-        <div
-          v-if="body"
-          class="article"
-          v-html="body"
-          id="article-content"
-        ></div>
-        </Col>
-        <Col col="lg-2">
-          <Toc selector="#article-content" class="toc d-none d-lg-block sticky-toc">
-            <Localization>
-              <template #en> 項目 </template>
-            </Localization>
-          </Toc>
-        </Col>
-      </Row>
-    </main>
-  </Container>
+  <div>
+    <Container>
+      <main class="shippori-antique-b1-regular main-color">
+        <Row justify-content="end">
+          <Col col="12 lg-8">
+            <BH1 class="title"
+              >{{ article.title }}<span class="Cocoa"></span
+            ></BH1>
+            <b-p class="publishedAt">
+              投稿日:{{ $formatDate(String(article.publishedAt)) }}
+            </b-p>
+            <NuxtImg
+              class="thumbnail-image"
+              :src="article.thumbnail.url"
+              :alt="article.title"
+              fit="cover"
+              format="webp"
+              placeholder
+              loading="lazy"
+            />
+            <Toc selector="#article-content" class="toc d-lg-none">
+              <Localization>
+                <template #en> 項目 </template>
+              </Localization>
+            </Toc>
+            <div
+              v-if="body"
+              class="article"
+              v-html="body"
+              id="article-content"
+            ></div>
+          </Col>
+          <Col col="lg-2">
+            <Toc
+              selector="#article-content"
+              class="toc d-none d-lg-block sticky-toc"
+            >
+              <Localization>
+                <template #en> 項目 </template>
+              </Localization>
+            </Toc>
+          </Col>
+        </Row>
+      </main>
+    </Container>
+  </div>
 </template>
 
 <style scoped>
@@ -119,7 +127,7 @@ onMounted(() => {
   height: 100%;
   left: 0;
   top: 0;
-  background-color: rgba(206, 206, 206, 0.2) ;
+  background-color: rgba(206, 206, 206, 0.2);
   z-index: -1;
   opacity: 0;
   transition: opacity 0.3s;
@@ -149,7 +157,11 @@ onMounted(() => {
   left: 0;
   right: 0;
   height: 3px;
-  background-image: linear-gradient(to right, $color-secondary 50%, transparent 50%);
+  background-image: linear-gradient(
+    to right,
+    $color-secondary 50%,
+    transparent 50%
+  );
   background-size: 10px 3px;
 }
 
