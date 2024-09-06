@@ -11,3 +11,9 @@
 - サムネイル制作を通してデザインの学習
 - 開発中のUIツール(use-bootstrap)の使用例
 - (学内での活動をアピールしたい)
+
+### .envに書くこと!
+```
+BASE_URL="https://(yourdomain).microcms.io/api/v1"
+API_KEY="MicroCMSのAPIKEY"
+```
