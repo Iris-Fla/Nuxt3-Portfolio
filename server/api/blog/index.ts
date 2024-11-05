@@ -1,10 +1,8 @@
-import { useFetch } from "nuxt/app"
-
 export default defineEventHandler(async (event) => {
   const config = useRuntimeConfig()
 
   try {
-    const response = await useFetch('/blog?fm=webp?', {
+    const response = await $fetch('/blog?fm=webp?', {
       baseURL: config.public.baseURL,
       headers: {
         "X-MICROCMS-API-KEY": config.apiKey,

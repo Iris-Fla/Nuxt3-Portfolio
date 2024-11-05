@@ -2,15 +2,10 @@
 const { BASE_URL, API_KEY } = process.env;
 
 export default defineNuxtConfig({
-  components: true,
   future: {
     compatibilityVersion: 4,
   },
-
-  experimental: {
-    viewTransition: true,
-  },
-
+  
   modules: [
     "@vueuse/nuxt",
     "usebootstrap",
@@ -59,5 +54,5 @@ export default defineNuxtConfig({
     },
   },
 
-  compatibilityDate: "2024-07-04",
+  compatibilityDate: "2024-11-05",
 });

@@ -1,5 +1,3 @@
-import { useFetch } from "nuxt/app"
-
 // server/api/blog/[slug].ts
 export default defineEventHandler(async (event) => {
   const config = useRuntimeConfig()
@@ -13,7 +11,7 @@ export default defineEventHandler(async (event) => {
   }
 
   try {
-    const response = await useFetch(`/blog/${slug}`, {
+    const response = await $fetch(`/blog/${slug}`, {
       baseURL: config.public.baseURL,
       headers: {
         "X-MICROCMS-API-KEY": config.apiKey,
