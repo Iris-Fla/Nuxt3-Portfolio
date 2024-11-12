@@ -12,9 +12,9 @@
   "devDependencies": {
     "@nuxt/devtools": "^1.6.0",
     "@nuxt/fonts": "^0.10.2",
-    "@nuxt/kit": "^3.14.0",
+    "@nuxt/kit": "^3.14.159",
     "npm-check-updates": "^17.1.10",
-    "nuxt": "^3.14.0",
+    "nuxt": "^3.14.159",
     "vue": "^3.5.12"
   },
   "dependencies": {
