@@ -58,10 +58,6 @@ const onImageLoad = (articleId) => {
                 />
               </div>
               <CardBody style="padding-top: 7px">
-                <SkillIcons
-                  style="margin-top: 5px"
-                  :useSkill="$formatTags(article.tags)"
-                />
                 <CardTitle margin="t-2">{{ article.title }}</CardTitle>
                 <CardText small style="opacity: 0.8; color: antiquewhite">
                   <BIcon margin="e-1" icon="bi:clock" />{{
