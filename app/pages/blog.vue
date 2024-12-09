@@ -7,7 +7,7 @@ useHead({
     { property: "og:title", content: "メルの図書館" },
     {
       property: "og:description",
-      content: "私(Iris-Fla)の学んだ技術や課題解決のアウトプット一覧です。",
+      content: "Iris-Flaの記事一覧",
     },
     { property: "og:type", content: "website" },
   ],

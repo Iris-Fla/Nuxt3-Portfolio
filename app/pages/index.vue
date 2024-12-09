@@ -1,4 +1,18 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+
+useHead({
+  title: "メルの図書館",
+  meta: [
+    { property: "og:title", content: "メルの図書館" },
+    {
+      property: "og:description",
+      content: "Iris-Flaのポートフォリオサイトです。",
+    },
+    { property: "og:type", content: "website" },
+  ],
+});
+
+</script>
 
 <template>
   <div>
@@ -6,6 +20,8 @@
       src="images/header.webp"
       alt="header"
       class="header-image"
+      loading="lazy"
+      quality="80"
     />
     <Container type="fluid" class="background">
       <p class="typed-text kosugi-maru-regular">
