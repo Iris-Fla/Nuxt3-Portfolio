@@ -1,7 +1,7 @@
 <template>
   <Navbar class="kawaiiNav" expand="sm">
     <Container type="fluid" class="shippori-antique-b1-regular">
-      <NavbarBrand href="/" style="color:#33272a;">メルの図書館<BIcon margin="s-1" icon="bi:book"/></NavbarBrand>
+      <NavbarBrand href="/" style="color:#33272a;">メルの図書館</NavbarBrand>
       <NavbarToggler />
       <NavbarCollapse>
         <NavbarNavList>
