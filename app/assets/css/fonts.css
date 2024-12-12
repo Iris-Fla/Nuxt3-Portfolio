@@ -1,10 +1,14 @@
+.defaultBackground {
+    background-color: #fef3e7;
+}
+
 .shippori-antique-b1-regular {
-    font-family: "Shippori Antique B1", sans-serif;
-    letter-spacing: 0.05em;
-  }
+  font-family: "Shippori Antique B1", sans-serif;
+  letter-spacing: 0.05em;
+}
 
 .kosugi-maru-regular {
-    font-family: "Kosugi Maru", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-  }
+  font-family: "Kosugi Maru", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}

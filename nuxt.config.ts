@@ -15,7 +15,7 @@ export default defineNuxtConfig({
     "@nuxt/fonts",
   ],
 
-  css: ["~/assets/css/default.scss"],
+  css: ["~/assets/css/fonts.css"],
 
   app: {
     head: {
@@ -31,6 +31,7 @@ export default defineNuxtConfig({
     },
     pageTransition: { name: 'page', mode: 'out-in' }
   },
+
   usebootstrap : {
     scss: true,
   },
