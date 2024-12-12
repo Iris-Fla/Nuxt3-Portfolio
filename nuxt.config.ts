@@ -5,7 +5,7 @@ export default defineNuxtConfig({
   future: {
     compatibilityVersion: 4,
   },
-  
+
   modules: [
     "@vueuse/nuxt",
     "usebootstrap",
@@ -30,6 +30,9 @@ export default defineNuxtConfig({
       ],
     },
     pageTransition: { name: 'page', mode: 'out-in' }
+  },
+  usebootstrap : {
+    scss: true,
   },
 
   runtimeConfig: {

@@ -13,8 +13,12 @@
     </Container>
   </Navbar>
 </template>
+<script lang=ts>
+import '~/assets/css/fonts.css'
+</script>
 <style>
 .kawaiiNav {
   background-color: #ff000000;
 }
 </style>
+
