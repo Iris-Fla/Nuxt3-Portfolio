@@ -35,11 +35,10 @@ import '~/assets/css/about.scss'
       <hr />
       <div class="text-center">
         <div class="image-container">
-          <NuxtImg
+          <img
             src="img/omen.webp"
             alt="icon"
             class="profile-icon"
-            quality="80"
           />
           <div class="overlay-circle">
             <p class="overlay-text kosugi-maru-regular">
