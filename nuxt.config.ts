@@ -7,9 +7,8 @@ export default defineNuxtConfig({
   },
 
   modules: [
-    "@vueuse/nuxt",
     "usebootstrap",
-    "usebootstrap-docs",
+    "@vueuse/nuxt",
     "nuxt-icon",
     "@nuxt/image",
     "@nuxt/fonts",
@@ -47,7 +46,7 @@ export default defineNuxtConfig({
     css: {
       preprocessorOptions: {
         scss: {
-          additionalData: `@use "~/assets/_colors.scss" as *;`,
+          additionalData: `@use "~/assets/_colors.scss" as *;@import "~/assets/scss/_variables.scss";`,
         },
       },
     },

@@ -35,7 +35,7 @@ import '~/assets/css/about.scss'
       <hr />
       <div class="text-center">
         <div class="image-container">
-          <img
+          <NuxtImg
             src="img/omen.webp"
             alt="icon"
             class="profile-icon"

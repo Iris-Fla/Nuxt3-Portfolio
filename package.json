@@ -26,9 +26,8 @@
     "gsap": "^3.12.5",
     "highlight.js": "^11.10.0",
     "ipx": "^3.0.1",
-    "nuxt-icon": "^0.6.10",
+    "nuxt-icon": "^1.0.0-beta.7",
     "pinia": "^2.3.0",
-    "usebootstrap": "^3.5.100",
-    "usebootstrap-docs": "^0.0.45"
+    "usebootstrap": "^3.5.100"
   }
 }

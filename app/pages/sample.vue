@@ -1,5 +1,5 @@
 <template>
     <Container>
-        <b-p text-color="primary">sample</b-p>
+        <b-p data-bs-theme="sample" text-color="blue">sample</b-p>
     </Container>
 </template>
