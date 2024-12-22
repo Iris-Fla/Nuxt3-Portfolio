@@ -19,3 +19,5 @@
   filter: blur(1rem);
 }
 </style>
+<script lang="ts" setup>
+</script>
